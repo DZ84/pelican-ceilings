@@ -1,0 +1,80 @@
+todo:
+	- adjust images
+		- main image has to be adjusted, 
+			- cropped, and maybe turned a little.
+			- then padding-top can go
+	
+		- image used in nutty mind also
+			- select correct part
+
+
+	- social gets at least:
+		v - github
+		v - linked in
+		v - happycow
+			- adjust this one
+
+	- links perhaps a resume pdf
+
+	- menu has....:
+		v - projects
+		v - about
+			- write reviews.. ?
+			v - contact
+
+		v - publications
+
+	- other menu's should have banners too.
+		- maybe even different ones from the main one, would be nice.
+
+	v - linking area on the right should not/never reach the top.
+		- but it shouldn't stick, as is the case by default
+
+	d - nicer effect on navbar when above an option
+	d - navbar nicer color
+	d - navbar heigher
+	- navbar less wide?
+
+	v - text size
+
+	v - adjust text length at home page
+		v - either change nutty-mind, or find/create the option
+
+	- could place pictures in overview
+		https://stackoverflow.com/questions/43991473/pelican-add-image-to-summary	
+
+	v - determine order of category buttons
+		- do something with combining lists or whatever shady if you have time
+
+	- add happycow icon
+
+	v - add markdown to bottom, powered by
+
+	v - move nutty-mind css in currect files
+
+	- add Dennis&Roben blog?
+
+	- add dancing balls to post?
+
+	- adjust:
+		v - site-name
+		v - author name
+
+	- get it in git
+	- url
+	- host it
+
+posts:
+	projects:
+		philo-b
+			- add: note to self, psql docker-compose needs ....
+
+
+notes/bugs:
+
+	- pelican_javascript content/css folders don't seem to support 
+	subfolders
+		d - you can make it work with relative paths in the output
+		folder.
+		- but creating a static folder in content would be nice.
+

@@ -1,0 +1,18 @@
+<style>
+	#banner{
+	    background-image:url("{{ SITEURL}}/{{ BANNER }}");
+	}
+</style>
+
+<div class="container">
+	<div id="banner" style="min-height: 850px; margin-top: -250px;">
+		<div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
+			<div class="copy">
+				<h1>{{ SITENAME }}</h1>
+				{% if BANNER_SUBTITLE %}
+					<p class="intro">{{ BANNER_SUBTITLE }}</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,1935 @@
+.figure-wrapper {
+	width: 96px;
+	height: 173px;
+	max-width: 142px;
+	text-align: center;
+
+	/* Has to have a positioning set to 
+	have all the children position against
+	this div. */
+	position: absolute;
+	/* for presentation: */
+	transform: scale(2.5)
+			   translate(-14%, -33%);
+
+
+	background: transparent;
+
+	float: left;
+}
+
+/* handy to overwrite globally set box-sizing,
+ * needs to be in combination with adding an
+ * id to the wrapper (or so it seems) 
+ * OR text-align: center; seems to be the
+ * right one.
+ * */
+.figure-wrapper * {
+	--webkit-box-sizing: initial;
+	--moz-box-sizing: initial;
+	box-sizing: initial;
+}
+
+/*----------------------------- TRIANGLE -----------------------------*/
+
+.figure-wrapper .triangle-wrapper {
+	width: 100%;
+	height: 210px;
+	background: transparent;
+	position: absolute;
+	transform:	scale(1.01, 1.0)
+				rotate(-11.8deg)	
+				translate(-43.2px, 51.2px)
+				scale(-.46, .40)
+				;
+	left: 0px;
+}
+
+.triangle-wrapper > span {
+	position: absolute;
+
+	/* these are set conform measurements of the
+	outer triangle. Everything smaller will just
+	fit. */
+	height: 80px;
+	width: 65px;
+	background: transparent;
+}
+
+.triangle-wrapper > span > span:first-of-type,
+.triangle-wrapper > span > span:nth-of-type(2) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 0;
+	width: 0;
+
+	border-left-style: solid;
+	border-top-style: solid;
+	border-left-color: transparent;
+	border-top-width: 80px;
+	border-left-width: 65px;
+}
+
+.triangle-wrapper > span > span:first-of-type {
+	/* Specifies the "complete" border color 
+	of every figureobject */
+	border-top-color: #ec6843;
+}
+
+.triangle-wrapper > span > span:nth-of-type(2) {
+	/* Specifies the fill color of all the
+	figures op this type. */
+	border-top-color: black;
+
+	/* Specifies the thickness of the borders */
+	transform: translate(2%, -3.5%) scale(.85, .85); 
+}
+
+/*----------------------------inner 1---------------------------*/
+.triangle-wrapper > span:nth-of-type(1) {
+	top: -1px;
+	left: 6px;
+	transform: rotate(-10deg); 
+}
+
+/*----------------------------inner 2---------------------------*/
+.triangle-wrapper > span:nth-of-type(2) {
+	top: -9px;
+	left: 6px;
+	transform: rotate(-1deg) scale(.74, .69); 
+}
+
+.triangle-wrapper > span:nth-of-type(2) > span:nth-of-type(2) {
+	transform: translate(3.6%, -4.5%) scale(.80, .80); 
+}
+
+/*----------------------------inner 3---------------------------*/
+.triangle-wrapper > span:nth-of-type(3) {
+	top: -15px;
+	left: 6px;
+	transform:	rotate(11deg) 
+				scale(.52, .47) 
+				skew(0deg, -5deg)
+				; 
+}
+
+.triangle-wrapper > span:nth-of-type(3) > span:nth-of-type(2) {
+	transform: translate(5.4%, -4.5%) scale(.75, .75); 
+}
+
+/*----------------------------inner 4---------------------------*/
+.triangle-wrapper > span:nth-of-type(4) {
+	top: -19px;
+	left: 9px;
+	transform:	rotate(27deg) 
+				scale(.35, .32) 
+				skew(0deg, -10deg)
+				; 
+}
+
+.triangle-wrapper > span:nth-of-type(4) > span:nth-of-type(2) {
+	transform: translate(4.0%, -5.3%) scale(.78, .78); 
+}
+
+/*----------------------------inner 5---------------------------*/
+.triangle-wrapper > span:nth-of-type(5) {
+	top: -19px;
+	left: 9px;
+	transform:	rotate(59deg) 
+				scale(.22, .19) 
+				skew(16deg, -26deg) 
+				translate(4%, -21%)
+				; 
+}
+
+.triangle-wrapper > span:nth-of-type(5) > span:nth-of-type(2) {
+	transform: translate(7.8%, -5.6%) scale(.67, .67); 
+}
+
+/*----------------------------inner 6---------------------------*/
+.triangle-wrapper > span:nth-of-type(6) {
+	top: -22px;
+	left: 12px;
+	transform:	rotate(89deg) 
+				scale(.12, .08) 
+				skew(25deg, -26deg) 
+				translate(28%, -28%)
+				; 
+}
+
+.triangle-wrapper > span:nth-of-type(6) > span:nth-of-type(2) {
+	transform: translate(8.3%, -10.3%) scale(.57, .57); 
+}
+
+/*----------------------------inner 7---------------------------*/
+.triangle-wrapper > span:nth-of-type(7) {
+	top: -22px;
+	left: 16px;
+	transform:	translate(0%, 1%) 
+				rotate(110deg) 
+				scale(.07, .03) 
+				skew(6deg, -26deg)
+				; 
+}
+
+.triangle-wrapper > span:nth-of-type(7) > span:nth-of-type(2) {
+	transform: translate(8.3%, -5.3%) scale(.57, .4); 
+}
+
+/*---------------------------------------------------------------*/
+
+/*----------------------------- PENTAGON 0  -----------------------------*/
+.figure-wrapper .pentagon-wrapper {
+	width: 100%;
+	height: 200px;
+	background: transparent;
+	position: absolute;
+
+}
+
+/* The following variables are used by the pentagons
+to shape the entire forms to what is needed (up to 8)*/
+.pentagon-adjustment-0 {
+	top: 150px;
+	left: -11px;
+	transform:	translate(26px, -30px) 
+				scale(.88, 1) 
+				rotate(-29deg)
+				;
+}
+
+.pentagon-mini-placement-1 {
+	top: 190px;
+	left: 0px;
+	transform:	translate(30px, 20px) 
+				scale(1, 1) 
+				rotate(-30deg)
+				;
+}
+
+.pentagon-mini-placement-3 {
+	top: 190px;
+	left: 0px;
+	transform:	translate(42px, -85px) 
+				scale(1, 1) 
+				rotate(-125deg)
+				;
+}
+
+.pentagon-mini-placement-4 {
+	top: 190px;
+	left: 0px;
+	transform:	translate(-46px, -24px) 
+				scale(.9, .9) 
+				rotate(98deg)
+				;
+}
+	
+.pentagon-mini-placement-5 {
+	top: 190px;
+	left: 0px;
+	transform:	translate(0px, -70px) 
+				scale(.8, .8) 
+				rotate(220deg)
+				;
+}
+
+.pentagon-mini-placement-6 {
+	top: 190px;
+	left: 0px;
+	transform:	translate(30px, -60px) 
+				scale(.8, .8) 
+				rotate(230deg)
+				;
+}
+	
+.pentagon-mini-placement-7 {
+	top: 190px;
+	left: 0px;
+	transform:	translate(63px, 0px) 
+				scale(.6, .6) 
+				rotate(310deg)
+				;
+}
+
+.pentagon-mini-placement-8 {
+	top: 190px;
+	left: 0px;
+	transform:	translate(-27px, 9px) 
+				scale(.5, .5) 
+				rotate(345deg)
+				;
+}
+
+.pentagon-wrapper > span {
+	position: absolute;
+
+	/* these are set conform measurements of the
+	outer triangle. Everything smaller will just
+	fit. */
+	height: 70px;
+	width: 70px;
+	background: transparent;
+}
+
+ .pentagon-wrapper > span > div:first-of-type, 
+ .pentagon-wrapper > span > div:nth-of-type(2),
+ .pentagon-wrapper > span > div:nth-of-type(3),
+ .pentagon-wrapper > span > div:nth-of-type(4) {
+	position: relative;
+	width: 34px;
+	border-width: 30px 18px 0;
+	border-style: solid;
+	border-color: #ec6843 transparent;
+	transform: translate(0, 30.2px);
+}
+
+.pentagon-wrapper > span > div:first-of-type {
+	/* Specifies the "complete" border color 
+	of every figureobject */
+	border-color: #ec6843 transparent;
+}
+
+.pentagon-wrapper > span > div:nth-of-type(2) {
+	/* Specifies the "complete" border color 
+	of every figureobject */
+	border-color: #ec6843 transparent;
+/* 	border-color: red transparent;*/
+	transform: translate(0, 1%) scale(1, 1)
+}
+
+.pentagon-wrapper > span > div:nth-of-type(3) {
+	/* Specifies the fill color of all the
+	figures op this type. */
+	border-color: black transparent;
+
+	/* Specifies the thickness of the borders */
+	transform: translate(0, -102%) scale(.91, .91);
+}
+
+.pentagon-wrapper > span > div:nth-of-type(4) {
+	/* Specifies the fill color of all the
+	figures op this type. */
+	border-color: black transparent;
+
+	/* Specifies the thickness of the borders */
+	transform: translate(0, -200%) scale(.90, .90);
+}
+
+/* The figures are being made double so they can be 
+overlayed on top of each other, but slightly different
+to prevent slight clippingproblems in firefox; the
+center would let some of the underlaying color through */
+ .pentagon-wrapper > span > div:first-of-type::before, 
+ .pentagon-wrapper > span > div:nth-of-type(2)::before,
+ .pentagon-wrapper > span > div:nth-of-type(3)::before,
+ .pentagon-wrapper > span > div:nth-of-type(4)::before {
+	content: "";
+	position: absolute;
+	height: 0px;
+	width: 0px;
+	left: -18px; /* translate doesn't work here */ 
+	border-width: 0 35px 25px;
+	border-style: solid;
+}
+
+.pentagon-wrapper > span > div:first-of-type::before {
+	transform: translate(0, -54.8px);
+	border-color: transparent transparent #ec6843;
+}
+
+.pentagon-wrapper > span > div:nth-of-type(2)::before {
+	transform: translate(0, -54.4px);
+	border-color: transparent transparent #ec6843;
+}
+
+.pentagon-wrapper > span > div:nth-of-type(3)::before {
+	transform: translate(0, -55px);
+	border-color: transparent transparent black;
+}
+
+.pentagon-wrapper > span > div:nth-of-type(4)::before {
+	transform: translate(0, -54.3px);
+	border-color: transparent transparent black;
+}
+
+/*----------------------------inner 1---------------------------*/
+.pentagon-wrapper > span:nth-of-type(1) {
+	/* Using translate here for positioning doesn't work well,
+	possibly because of the combination of absolute and relative
+	elements? I can't say, but behavior differs significantly
+	and sometimes greatly for firefox and chrome. Vendor 
+	prefixes don't seem to solve it.*/
+	top: 0;
+	left: 0;
+	transform:  rotate(-18deg) 
+				skew(13deg, 0deg) 
+				scale(1, 1.1)
+				; 
+}
+
+.pentagon-mini-adjustment-1 > span:nth-of-type(1) {
+	transform:  translate(0px, 0px) 
+				rotate(0deg) 
+				skew(0deg, 0deg) 
+				scale(.45, .45)
+				; 
+}
+
+.pentagon-mini-adjustment-1 > span:nth-of-type(1) > div:nth-of-type(3) {
+	/* Used to specify the thickness of the borders */
+	transform: translate(0, -106%) scale(.82, .82);
+}
+
+.pentagon-mini-adjustment-1 > span:nth-of-type(1) > div:nth-of-type(4) {
+	/* Used to specify the thickness of the borders */
+	transform: translate(0, -204%) scale(.83, .83);
+}
+
+.pentagon-mini-adjustment-2 > span:nth-of-type(1) {
+	transform:  translate(0px, 0px) 
+				rotate(0deg) 
+				skew(0deg, 0deg) 
+				scale(.45, .45)
+				; 
+}
+
+.pentagon-mini-adjustment-2 > span:nth-of-type(1) > div:nth-of-type(3) {
+	/* Used to specify the thickness of the borders */
+	transform: translate(0, -106%) scale(.82, .82);
+}
+
+.pentagon-mini-adjustment-2 > span:nth-of-type(1) > div:nth-of-type(4) {
+	/* Used to specify the thickness of the borders */
+	transform: translate(0, -204%) scale(.83, .83);
+}
+
+/*----------------------------inner 2---------------------------*/
+.pentagon-wrapper > span:nth-of-type(2) {
+	top: 1px;
+	left: 0.5px;
+	transform:	rotate(-25deg) 
+				skew(15deg, 0deg) 
+				scale(.85, .98)
+				; 
+}
+
+/* Used to specify the thickness of the borders: */
+
+
+.pentagon-mini-adjustment-1 > span:nth-of-type(2) {
+	transform:  translate(-0.5px, -.3px) 
+				rotate(0deg) 
+				skew(0deg, 0deg) 
+				scale(.32, -.34)
+				; 
+}
+.pentagon-mini-adjustment-1 > span:nth-of-type(2) > div:nth-of-type(3) {
+	transform: translate(0, -106%) scale(.78, .78);
+}
+
+.pentagon-mini-adjustment-1 > span:nth-of-type(2) > div:nth-of-type(4) {
+	transform: translate(0, -204%) scale(.79, .79);
+}
+
+.pentagon-mini-adjustment-2 > span:nth-of-type(2) {
+	transform:  translate(-0.5px, .0px) 
+				rotate(0deg) 
+				skew(0deg, 0deg) 
+				scale(.4, -.43)
+				; 
+}
+
+.pentagon-mini-adjustment-2 > span:nth-of-type(2) > div:nth-of-type(3) {
+	transform: translate(0, -106%) scale(.78, .78);
+}
+
+.pentagon-mini-adjustment-2 > span:nth-of-type(2) > div:nth-of-type(4) {
+	transform: translate(0, -204%) scale(.79, .79);
+}
+
+
+
+/*----------------------------inner 3---------------------------*/
+.pentagon-wrapper > span:nth-of-type(3) {
+	top: 1px;
+	left: 0.5px;
+	transform:	rotate(-33deg) 
+				skew(18deg, -5deg) 
+				scale(.68, .88)
+				; 
+}
+
+.pentagon-wrapper > span:nth-of-type(3) > div:nth-of-type(3) {
+	transform: translate(0, -102%) scale(.89, .89);
+}
+
+.pentagon-wrapper > span:nth-of-type(3) > div:nth-of-type(4) {
+	transform: translate(0, -200%) scale(.88, .88);
+}
+
+.pentagon-mini-adjustment-1 > span:nth-of-type(3) {
+	transform:  translate(-0.5px, -1.1px) 
+				rotate(0deg) 
+				skew(0deg, 0deg) 
+				scale(.23, .23)
+				; 
+}
+
+.pentagon-mini-adjustment-1 > span:nth-of-type(3) > div:nth-of-type(3) {
+	transform: translate(0, -110%) scale(.71, .71);
+}
+
+.pentagon-mini-adjustment-1 > span:nth-of-type(3) > div:nth-of-type(4) {
+	transform: translate(0, -208%) scale(.69, .69);
+}
+
+
+/*----------------------------inner 4---------------------------*/
+.pentagon-wrapper > span:nth-of-type(4) {
+	top: 1.4px;
+	left: 0.9px;
+	transform:	rotate(-46deg) 
+				skew(14deg, -5deg) 
+				scale(.54, .78)
+				; 
+}
+
+.pentagon-wrapper > span:nth-of-type(4) > div:nth-of-type(3) {
+	transform: translate(0, -102%) scale(.88, .88);
+}
+
+.pentagon-wrapper > span:nth-of-type(4) > div:nth-of-type(4) {
+	transform: translate(0, -200%) scale(.87, .87);
+}
+
+.pentagon-mini-adjustment-1 > span:nth-of-type(4) {
+	transform:  translate(-1px, -1.4px) 
+				rotate(0deg) 
+				skew(0deg, 0deg) 
+				scale(.14, -.14)
+				; 
+}
+
+.pentagon-mini-adjustment-1 > span:nth-of-type(4) > div:nth-of-type(3) {
+	transform: translate(0, -110%) scale(.63, .63);
+}
+
+.pentagon-mini-adjustment-1 > span:nth-of-type(4) > div:nth-of-type(4) {
+	transform: translate(0, -208%) scale(.65, .65);
+}
+
+/*----------------------------inner 5---------------------------*/
+.pentagon-wrapper > span:nth-of-type(5) {
+	top: 1.7px;
+	left: 1.5px;
+	transform:	rotate(-60deg) 
+				skew(9deg, -5deg) 
+				scale(.43, .67)
+				; 
+}
+
+.pentagon-wrapper > span:nth-of-type(5) > div:nth-of-type(3) {
+	transform: translate(0, -104%) scale(.85, .85);
+}
+
+.pentagon-wrapper > span:nth-of-type(5) > div:nth-of-type(4) {
+	transform: translate(0, -202%) scale(.84, .84);
+}
+
+.pentagon-mini-adjustment-1 > span:nth-of-type(5) {
+	transform:  translate(-1.5px, -1.8px) 
+				rotate(0deg) 
+				skew(0deg, 0deg) 
+				scale(.08, .08)
+				; 
+}
+
+.pentagon-mini-adjustment-1 > span:nth-of-type(5) > div:nth-of-type(3) {
+	transform: translate(0, -114%) scale(.51, .51);
+}
+
+.pentagon-mini-adjustment-1 > span:nth-of-type(5) > div:nth-of-type(4) {
+	transform: translate(0, -212%) scale(.52, .52);
+}
+
+/*----------------------------inner 6---------------------------*/
+.pentagon-wrapper > span:nth-of-type(6) {
+	top: 1.7px;
+	left: 1.5px;
+	transform:	rotate(-72deg) 
+				skew(9deg, -10deg) 
+				scale(.33, .55)
+				; 
+}
+
+.pentagon-wrapper > span:nth-of-type(6) > div:nth-of-type(3) {
+	transform: translate(0, -104%) scale(.83, .83);
+}
+
+.pentagon-wrapper > span:nth-of-type(6) > div:nth-of-type(4) {
+	transform: translate(0, -202%) scale(.82, .82);
+}
+
+/*----------------------------inner 7---------------------------*/
+.pentagon-wrapper > span:nth-of-type(7) {
+	top: 1.8px;
+	left: 2.0px;
+	transform:	rotate(-85deg) 
+				skew(9deg, -14deg) 
+				scale(.27, .42)
+				; 
+}
+
+.pentagon-wrapper > span:nth-of-type(7) > div:nth-of-type(3) {
+	transform: translate(0, -105%) scale(.79, .79);
+}
+
+.pentagon-wrapper > span:nth-of-type(7) > div:nth-of-type(4) {
+	transform: translate(0, -203%) scale(.78, .78);
+}
+
+/*----------------------------inner 8---------------------------*/
+.pentagon-wrapper > span:nth-of-type(8) {
+	top: 1.8px;
+	left: 2.3px;
+	transform:	rotate(-99deg) 
+				skew(11deg, -14deg) 
+				scale(.22, .30)
+				; 
+}
+
+.pentagon-wrapper > span:nth-of-type(8) > div:nth-of-type(3) {
+	transform: translate(-0.5%, -109%) scale(.72, .72);
+}
+
+.pentagon-wrapper > span:nth-of-type(8) > div:nth-of-type(4) {
+	transform: translate(-0.5%, -205%) scale(.70, .70);
+}
+
+/*----------------------------inner 9---------------------------*/
+.pentagon-wrapper > span:nth-of-type(9) {
+	top: 1.8px;
+	left: 2.7px;
+	transform:	rotate(-115deg) 
+				skew(18deg, -14deg) 
+				scale(.16, .20)
+				; 
+}
+
+.pentagon-wrapper > span:nth-of-type(9) > div:nth-of-type(3) {
+	transform: translate(-0.5%, -109%) scale(.65, .65);
+}
+
+.pentagon-wrapper > span:nth-of-type(9) > div:nth-of-type(4) {
+	transform: translate(-0.5%, -207%) scale(.63, .63);
+}
+
+/*----------------------------inner 10---------------------------*/
+.pentagon-wrapper > span:nth-of-type(10) {
+	top: 1.8px;
+	left: 2.8px;
+	transform:	rotate(-135deg) 
+				skew(19deg, -14deg) 
+				scale(.10, .13)
+				; 
+}
+
+.pentagon-wrapper > span:nth-of-type(10) > div:nth-of-type(3) {
+	transform: translate(-0.5%, -113%) scale(.55, .55);
+}
+
+.pentagon-wrapper > span:nth-of-type(10) > div:nth-of-type(4) {
+	transform: translate(-0.5%, -209%) scale(.52, .52);
+}
+
+/*----------------------------inner 11---------------------------*/
+.pentagon-wrapper > span:nth-of-type(11) {
+	top: 1.8px;
+	left: 2.99px;
+	transform:	rotate(-159deg)	
+				skew(19deg, -14deg) 
+				scale(.06, .07)
+				; 
+}
+
+.pentagon-wrapper > span:nth-of-type(11) > div:nth-of-type(3) {
+	transform: translate(-0.5%, -113%) scale(.05, .05);
+}
+
+.pentagon-wrapper > span:nth-of-type(11) > div:nth-of-type(4) {
+	transform: translate(-0.5%, -209%) scale(.01, .01);
+}
+
+/*---------------------------------------------------------------*/
+
+/*----------------------------- PENTAGON 1  -----------------------------*/
+.figure-wrapper .pentagon-wrapper1 {
+	width: 100%;
+	height: 200px;
+	background: transparent;
+	position: absolute;
+
+	/* The following variables are used by the pentagons
+	to shape the entire forms to what is needed */
+	top: 150px;
+	top: 75.3px;
+	left: -30.1px;
+	transform:	translate(-8px, -7.5px)	
+				scale(0.95, -1)
+				rotate(66.5deg)
+				;
+}
+
+.pentagon-wrapper1 > span {
+	position: absolute;
+
+	/* these are set conform measurements of the
+	outer triangle. Everything smaller will just
+	fit. */
+	height: 70px;
+	width: 70px;
+	background: transparent;
+}
+
+ .pentagon-wrapper1 > span > div:first-of-type, 
+ .pentagon-wrapper1 > span > div:nth-of-type(2),
+ .pentagon-wrapper1 > span > div:nth-of-type(3),
+ .pentagon-wrapper1 > span > div:nth-of-type(4) {
+	position: relative;
+	width: 34px;
+	border-width: 30px 18px 0;
+	border-style: solid;
+	border-color: #ec6843 transparent;
+	transform: translate(0, 30.2px);
+}
+
+.pentagon-wrapper1 > span > div:first-of-type {
+	/* Specifies the "complete" border color 
+	of every figureobject */
+	border-color: #ec6843 transparent;
+}
+
+.pentagon-wrapper1 > span > div:nth-of-type(2) {
+	/* Specifies the "complete" border color 
+	of every figureobject */
+	border-color: #ec6843 transparent;
+/* 	border-color: red transparent;*/
+	transform: translate(0, 1%) scale(1, 1)
+}
+
+.pentagon-wrapper1 > span > div:nth-of-type(3) {
+	/* Specifies the fill color of all the
+	figures op this type. */
+	border-color: black transparent;
+
+	/* Specifies the thickness of the borders */
+	transform: translate(0, -102%) scale(.91, .91);
+}
+
+.pentagon-wrapper1 > span > div:nth-of-type(4) {
+	/* Specifies the fill color of all the
+	figures op this type. */
+	border-color: black transparent;
+
+	/* Specifies the thickness of the borders */
+	transform: translate(0, -200%) scale(.90, .90);
+}
+
+/* The figure are being made double so they can be 
+overlayed on top of each other, but slightly different
+to prevent slight clippingproblems in firefox; the
+center would let some of the underlaying color through */
+ .pentagon-wrapper1 > span > div:first-of-type::before, 
+ .pentagon-wrapper1 > span > div:nth-of-type(2)::before,
+ .pentagon-wrapper1 > span > div:nth-of-type(3)::before,
+ .pentagon-wrapper1 > span > div:nth-of-type(4)::before {
+	content: "";
+	position: absolute;
+	height: 0px;
+	width: 0px;
+	left: -18px; /* translate doesn't work here */ 
+	border-width: 0 35px 25px;
+	border-style: solid;
+}
+
+.pentagon-wrapper1 > span > div:first-of-type::before {
+	transform: translate(0, -54.8px);
+	border-color: transparent transparent #ec6843;
+}
+
+.pentagon-wrapper1 > span > div:nth-of-type(2)::before {
+	transform: translate(0, -54.4px);
+	border-color: transparent transparent #ec6843;
+}
+
+.pentagon-wrapper1 > span > div:nth-of-type(3)::before {
+	transform: translate(0, -55px);
+	border-color: transparent transparent black;
+}
+
+.pentagon-wrapper1 > span > div:nth-of-type(4)::before {
+	transform: translate(0, -54.3px);
+	border-color: transparent transparent black;
+}
+
+/*----------------------------inner 1---------------------------*/
+.pentagon-wrapper1 > span:nth-of-type(1) {
+	/* Using translate here for positioning doesn't work well,
+	possibly because of the combination of absolute and relative
+	elements? I can't say, but behavior is differs significantly
+	and sometimes greatly for firefox and chrome. Vendor 
+	prefixes don't seem to solve it.*/
+	top: 0;
+	left: 0;
+	transform:  rotate(-18deg) 
+				skew(13deg, 0deg) 
+				scale(1, 1.1)
+				; 
+}
+
+/*----------------------------inner 2---------------------------*/
+.pentagon-wrapper1 > span:nth-of-type(2) {
+	top: 1px;
+	left: 0.5px;
+	transform:	rotate(-25deg) 
+				skew(15deg, 0deg) 
+				scale(.85, .98)
+				; 
+}
+
+/*----------------------------inner 3---------------------------*/
+.pentagon-wrapper1 > span:nth-of-type(3) {
+	top: 1px;
+	left: 0.5px;
+	transform:	rotate(-33deg) 
+				skew(18deg, -5deg) 
+				scale(.68, .88)
+				; 
+}
+	
+/* Used to specify the thickness of the borders: */
+
+.pentagon-wrapper1 > span:nth-of-type(3) > div:nth-of-type(3) {
+	transform: translate(0, -102%) scale(.89, .89);
+}
+
+.pentagon-wrapper1 > span:nth-of-type(3) > div:nth-of-type(4) {
+	transform: translate(0, -200%) scale(.88, .88);
+}
+
+/*----------------------------inner 4---------------------------*/
+.pentagon-wrapper1 > span:nth-of-type(4) {
+	top: 1.4px;
+	left: 0.9px;
+	transform:	rotate(-46deg) 
+				skew(14deg, -5deg) 
+				scale(.54, .78)
+				; 
+}
+
+.pentagon-wrapper1 > span:nth-of-type(4) > div:nth-of-type(3) {
+	transform: translate(0, -102%) scale(.88, .88);
+}
+
+.pentagon-wrapper1 > span:nth-of-type(4) > div:nth-of-type(4) {
+	transform: translate(0, -200%) scale(.87, .87);
+}
+
+/*----------------------------inner 5---------------------------*/
+.pentagon-wrapper1 > span:nth-of-type(5) {
+	top: 1.7px;
+	left: 1.5px;
+	transform:	rotate(-60deg) 
+				skew(9deg, -5deg) 
+				scale(.43, .67)
+				; 
+}
+
+.pentagon-wrapper1 > span:nth-of-type(5) > div:nth-of-type(3) {
+	transform: translate(0, -104%) scale(.85, .85);
+}
+
+.pentagon-wrapper1 > span:nth-of-type(5) > div:nth-of-type(4) {
+	transform: translate(0, -202%) scale(.84, .84);
+}
+
+/*----------------------------inner 6---------------------------*/
+.pentagon-wrapper1 > span:nth-of-type(6) {
+	top: 1.7px;
+	left: 1.5px;
+	transform:	rotate(-72deg) 
+				skew(9deg, -10deg) 
+				scale(.33, .55)
+				; 
+}
+
+.pentagon-wrapper1 > span:nth-of-type(6) > div:nth-of-type(3) {
+	transform: translate(0, -104%) scale(.83, .83);
+}
+
+.pentagon-wrapper1 > span:nth-of-type(6) > div:nth-of-type(4) {
+	transform: translate(0, -202%) scale(.82, .82);
+}
+
+/*----------------------------inner 7---------------------------*/
+.pentagon-wrapper1 > span:nth-of-type(7) {
+	top: 1.8px;
+	left: 2.0px;
+	transform:	rotate(-85deg) 
+				skew(9deg, -14deg) 
+				scale(.27, .42)
+				; 
+}
+
+.pentagon-wrapper1 > span:nth-of-type(7) > div:nth-of-type(3) {
+	transform: translate(0, -105%) scale(.79, .79);
+}
+
+.pentagon-wrapper1 > span:nth-of-type(7) > div:nth-of-type(4) {
+	transform: translate(0, -203%) scale(.78, .78);
+}
+
+/*----------------------------inner 8---------------------------*/
+.pentagon-wrapper1 > span:nth-of-type(8) {
+	top: 1.8px;
+	left: 2.3px;
+	transform:	rotate(-99deg) 
+				skew(11deg, -14deg) 
+				scale(.22, .30)
+				; 
+}
+
+.pentagon-wrapper1 > span:nth-of-type(8) > div:nth-of-type(3) {
+	transform: translate(-0.5%, -109%) scale(.72, .72);
+}
+
+.pentagon-wrapper1 > span:nth-of-type(8) > div:nth-of-type(4) {
+	transform: translate(-0.5%, -205%) scale(.70, .70);
+}
+
+/*----------------------------inner 9---------------------------*/
+.pentagon-wrapper1 > span:nth-of-type(9) {
+	top: 1.8px;
+	left: 2.7px;
+	transform: rotate(-115deg) skew(18deg, -14deg) scale(.16, .20); 
+}
+
+.pentagon-wrapper1 > span:nth-of-type(9) > div:nth-of-type(3) {
+	transform: translate(-0.5%, -109%) scale(.65, .65);
+}
+
+.pentagon-wrapper1 > span:nth-of-type(9) > div:nth-of-type(4) {
+	transform: translate(-0.5%, -207%) scale(.63, .63);
+}
+
+/*----------------------------inner 10---------------------------*/
+.pentagon-wrapper1 > span:nth-of-type(10) {
+	top: 1.8px;
+	left: 2.8px;
+	transform:	rotate(-135deg) 
+				skew(19deg, -14deg) 
+				scale(.10, .13)
+				; 
+}
+
+.pentagon-wrapper1 > span:nth-of-type(10) > div:nth-of-type(3) {
+	transform: translate(-0.5%, -113%) scale(.55, .55);
+}
+
+.pentagon-wrapper1 > span:nth-of-type(10) > div:nth-of-type(4) {
+	transform: translate(-0.5%, -209%) scale(.52, .52);
+}
+
+/*----------------------------inner 11---------------------------*/
+.pentagon-wrapper1 > span:nth-of-type(11) {
+	top: 1.8px;
+	left: 2.99px;
+	transform:	rotate(-159deg) 
+				skew(19deg, -14deg) 
+				scale(.06, .07)
+				; 
+}
+
+.pentagon-wrapper1 > span:nth-of-type(11) > div:nth-of-type(3) {
+	transform: translate(-0.5%, -113%) scale(.05, .05);
+}
+
+.pentagon-wrapper1 > span:nth-of-type(11) > div:nth-of-type(4) {
+	transform: translate(-0.5%, -209%) scale(.01, .01);
+}
+
+/*---------------------------------------------------------------*/
+
+/*----------------------------- PENTAGON 2  -----------------------------*/
+.figure-wrapper .pentagon-wrapper2 {
+	width: 100%;
+	height: 200px;
+	background: transparent;
+	position: absolute;
+
+	/* The following variables are used by the pentagons
+	to shape the entire forms to what is needed */
+	top: 150px;
+	top: 24px;
+	left: 13px;
+	transform:	scale(.97, 1)	
+				translate(-27px, -30px) 
+				scale(-0.88, -1)
+				rotate(-29deg)
+				;
+}
+
+.pentagon-wrapper2 > span {
+	position: absolute;
+
+	/* these are set conform measurements of the
+	outer triangle. Everything smaller will just
+	fit. */
+	height: 70px;
+	width: 70px;
+	background: transparent;
+}
+
+ .pentagon-wrapper2 > span > div:first-of-type, 
+ .pentagon-wrapper2 > span > div:nth-of-type(2),
+ .pentagon-wrapper2 > span > div:nth-of-type(3),
+ .pentagon-wrapper2 > span > div:nth-of-type(4) {
+	position: relative;
+	width: 34px;
+	border-width: 30px 18px 0;
+	border-style: solid;
+	border-color: #ec6843 transparent;
+	transform: translate(0, 30.2px);
+}
+
+.pentagon-wrapper2 > span > div:first-of-type {
+	/* Specifies the "complete" border color 
+	of every figureobject */
+	border-color: #ec6843 transparent;
+}
+
+.pentagon-wrapper2 > span > div:nth-of-type(2) {
+	/* Specifies the "complete" border color 
+	of every figureobject */
+	border-color: #ec6843 transparent;
+/* 	border-color: red transparent;*/
+	transform: translate(0, 1%) scale(1, 1)
+}
+
+.pentagon-wrapper2 > span > div:nth-of-type(3) {
+	/* Specifies the fill color of all the
+	figures op this type. */
+	border-color: black transparent;
+
+	/* Specifies the thickness of the borders */
+	transform: translate(0, -100%) scale(.93, .93);
+}
+
+.pentagon-wrapper2 > span > div:nth-of-type(4) {
+	/* Specifies the fill color of all the
+	figures op this type. */
+	border-color: black transparent;
+
+	/* Specifies the thickness of the borders */
+	transform: translate(0, -200%) scale(.90, .90);
+}
+
+/* The figure are being made double so they can be 
+overlayed on top of each other, but slightly different
+to prevent slight clippingproblems in firefox; the
+center would let some of the underlaying color through */
+ .pentagon-wrapper2 > span > div:first-of-type::before, 
+ .pentagon-wrapper2 > span > div:nth-of-type(2)::before,
+ .pentagon-wrapper2 > span > div:nth-of-type(3)::before,
+ .pentagon-wrapper2 > span > div:nth-of-type(4)::before {
+	content: "";
+	position: absolute;
+	height: 0px;
+	width: 0px;
+	left: -18px; /* translate doesn't work here */ 
+	border-width: 0 35px 25px;
+	border-style: solid;
+}
+
+.pentagon-wrapper2 > span > div:first-of-type::before {
+	transform: translate(0, -54.8px);
+	border-color: transparent transparent #ec6843;
+}
+
+.pentagon-wrapper2 > span > div:nth-of-type(2)::before {
+	transform: translate(0, -54.4px);
+	border-color: transparent transparent #ec6843;
+}
+
+.pentagon-wrapper2 > span > div:nth-of-type(3)::before {
+	transform: translate(0, -55px);
+	border-color: transparent transparent black;
+}
+
+.pentagon-wrapper2 > span > div:nth-of-type(4)::before {
+	transform: translate(0, -54.3px);
+	border-color: transparent transparent black;
+}
+
+
+/*----------------------------inner 1---------------------------*/
+.pentagon-wrapper2 > span:nth-of-type(1) {
+	/* Using translate here for positioning doesn't work well,
+	possibly because of the combination of absolute and relative
+	elements? I can't say, but behavior differs significantly
+	and sometimes greatly for firefox and chrome. Vendor 
+	prefixes don't seem to solve it.*/
+	top: 0;
+	left: 0;
+	transform:	rotate(-18deg) 
+				skew(13deg, 0deg) 
+				scale(1, 1.1)
+				; 
+}
+
+/*----------------------------inner 2---------------------------*/
+.pentagon-wrapper2 > span:nth-of-type(2) {
+	top: 1px;
+	left: 0.5px;
+	transform:	rotate(-25deg) 
+				skew(15deg, 0deg) 
+				scale(.85, .98)
+				; 
+}
+
+/*----------------------------inner 3---------------------------*/
+.pentagon-wrapper2 > span:nth-of-type(3) {
+	top: 1px;
+	left: 0.5px;
+	transform:	rotate(-33deg) 
+				skew(18deg, -5deg) 
+				scale(.68, .88)
+				; 
+}
+
+.pentagon-wrapper2 > span:nth-of-type(3) > div:nth-of-type(3) {
+	/* Used to specify the thickness of the borders */
+	transform: translate(0, -102%) scale(.89, .89);
+}
+
+.pentagon-wrapper2 > span:nth-of-type(3) > div:nth-of-type(4) {
+	/* Used to specify the thickness of the borders */
+	transform: translate(0, -200%) scale(.88, .88);
+}
+
+/*----------------------------inner 4---------------------------*/
+.pentagon-wrapper2 > span:nth-of-type(4) {
+	top: 1.4px;
+	left: 0.9px;
+	transform: rotate(-46deg) skew(14deg, -5deg) scale(.54, .78); 
+}
+
+.pentagon-wrapper2 > span:nth-of-type(4) > div:nth-of-type(3) {
+	transform: translate(0, -102%) scale(.88, .88);
+}
+
+.pentagon-wrapper2 > span:nth-of-type(4) > div:nth-of-type(4) {
+	transform: translate(0, -200%) scale(.87, .87);
+}
+
+/*----------------------------inner 5---------------------------*/
+.pentagon-wrapper2 > span:nth-of-type(5) {
+	top: 1.7px;
+	left: 1.5px;
+	transform: rotate(-60deg) skew(9deg, -5deg) scale(.43, .67); 
+}
+
+.pentagon-wrapper2 > span:nth-of-type(5) > div:nth-of-type(3) {
+	transform: translate(0, -104%) scale(.85, .85);
+}
+
+.pentagon-wrapper2 > span:nth-of-type(5) > div:nth-of-type(4) {
+	transform: translate(0, -202%) scale(.84, .84);
+}
+
+/*----------------------------inner 6---------------------------*/
+.pentagon-wrapper2 > span:nth-of-type(6) {
+	top: 1.7px;
+	left: 1.5px;
+	transform: rotate(-72deg) skew(9deg, -10deg) scale(.33, .55); 
+}
+
+.pentagon-wrapper2 > span:nth-of-type(6) > div:nth-of-type(3) {
+	transform: translate(0, -104%) scale(.83, .83);
+}
+
+.pentagon-wrapper2 > span:nth-of-type(6) > div:nth-of-type(4) {
+	transform: translate(0, -202%) scale(.82, .82);
+}
+
+/*----------------------------inner 7---------------------------*/
+.pentagon-wrapper2 > span:nth-of-type(7) {
+	top: 1.8px;
+	left: 2.0px;
+	transform: rotate(-85deg) skew(9deg, -14deg) scale(.27, .42); 
+}
+
+.pentagon-wrapper2 > span:nth-of-type(7) > div:nth-of-type(3) {
+	transform: translate(0, -105%) scale(.79, .79);
+}
+
+.pentagon-wrapper2 > span:nth-of-type(7) > div:nth-of-type(4) {
+	transform: translate(0, -203%) scale(.78, .78);
+}
+
+/*----------------------------inner 8---------------------------*/
+.pentagon-wrapper2 > span:nth-of-type(8) {
+	top: 1.8px;
+	left: 2.3px;
+	transform: rotate(-99deg) skew(11deg, -14deg) scale(.22, .30); 
+}
+
+.pentagon-wrapper2 > span:nth-of-type(8) > div:nth-of-type(3) {
+	transform: translate(-0.5%, -109%) scale(.72, .72);
+}
+
+.pentagon-wrapper2 > span:nth-of-type(8) > div:nth-of-type(4) {
+	transform: translate(-0.5%, -205%) scale(.70, .70);
+}
+
+/*----------------------------inner 9---------------------------*/
+.pentagon-wrapper2 > span:nth-of-type(9) {
+	top: 1.8px;
+	left: 2.7px;
+	transform: rotate(-115deg) skew(18deg, -14deg) scale(.16, .20); 
+}
+
+.pentagon-wrapper2 > span:nth-of-type(9) > div:nth-of-type(3) {
+	transform: translate(-0.5%, -109%) scale(.65, .65);
+}
+
+.pentagon-wrapper2 > span:nth-of-type(9) > div:nth-of-type(4) {
+	transform: translate(-0.5%, -207%) scale(.63, .63);
+}
+
+/*----------------------------inner 10---------------------------*/
+.pentagon-wrapper2 > span:nth-of-type(10) {
+	top: 1.8px;
+	left: 2.8px;
+	transform: rotate(-135deg) skew(19deg, -14deg) scale(.10, .13); 
+}
+
+.pentagon-wrapper2 > span:nth-of-type(10) > div:nth-of-type(3) {
+	transform: translate(-0.5%, -113%) scale(.55, .55);
+}
+
+.pentagon-wrapper2 > span:nth-of-type(10) > div:nth-of-type(4) {
+	transform: translate(-0.5%, -209%) scale(.52, .52);
+}
+
+/*----------------------------inner 11---------------------------*/
+.pentagon-wrapper2 > span:nth-of-type(11) {
+	top: 1.8px;
+	left: 2.99px;
+	transform: rotate(-159deg) skew(19deg, -14deg) scale(.06, .07); 
+}
+
+.pentagon-wrapper2 > span:nth-of-type(11) > div:nth-of-type(3) {
+	transform: translate(-0.5%, -113%) scale(.05, .05);
+}
+
+.pentagon-wrapper2 > span:nth-of-type(11) > div:nth-of-type(4) {
+	transform: translate(-0.5%, -209%) scale(.01, .01);
+}
+
+/*---------------------------------------------------------------*/
+
+/*----------------------------- TRIANGLE 1-----------------------------*/
+.figure-wrapper .triangle-wrapper1 {
+	width: 100%;
+	height: 80px;
+	background: transparent;
+	position: absolute;
+	top: 194px;
+	left: -10px;
+	transform:	translate(26px, -27.8px) 
+				scale(.88, .90) 
+				rotate(-29deg);
+}
+
+.triangle-wrapper1 > span:first-of-type {
+	position: absolute;
+	background: transparent;
+
+	/* These are set conform measurements of the
+	outer triangle. Everything smaller will just
+	fit. */
+	height: 80px;
+	width: 65px;
+	top: -14.0px;
+	left: 30.5px;
+	transform:	rotate(56.5deg) 
+				scale(0.60, 1.0) 
+				skew(14deg, -0deg)
+				; 
+}
+
+.triangle-wrapper1 > span:first-of-type > span:first-of-type {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-left-color: transparent;
+	border-bottom-width: 28px;
+	border-left-width: 60px;
+	height: 0;
+	width: 0;
+}
+
+.triangle-wrapper1 > span:first-of-type > span:first-of-type {
+	border-bottom-color: black;
+}
+
+.triangle-wrapper1 > span {
+	position: absolute;
+	border: 0;
+	background: #ec6843; 
+}
+
+/*----------------------------inner 2---------------------------*/
+.triangle-wrapper1 > span:nth-of-type(2) {
+	top: -9.5px;
+	left: 64.3px;
+	height: 32px;
+	width: 28px;
+	border-radius: 50%/5px 5px 0 0; 
+	border: solid 3.2px;
+	border-color: #ec6843 transparent transparent transparent;
+	background: transparent;
+	transform:	rotate(142deg) 
+				scale(1.06, 1) 
+				skew(0deg, 0deg)
+				; 
+}
+
+/*----------------------------inner 3---------------------------*/
+.triangle-wrapper1 > span:nth-of-type(3) {
+	top: 5px;
+	left: 60.0px;
+	height: 2px;
+	width: 44px;
+	transform:	rotate(13.0deg) 
+				scale(1, 1)
+				skew(0deg, 0deg)
+				; 
+}
+
+/*----------------------------inner 4---------------------------*/
+.triangle-wrapper1 > span:nth-of-type(4) {
+	top: 8px;
+	left: 61.0px;
+	height: 2px;
+	width: 40.5px;
+	transform:	rotate(19deg) 
+				scale(1, 1) 
+				skew(0deg, 0deg)
+				; 
+}
+
+/*----------------------------inner 5---------------------------*/
+.triangle-wrapper1 > span:nth-of-type(5) {
+	top: 10px;
+	left: 60.0px;
+	height: 2px;
+	width: 37px;
+	transform:	rotate(27deg) 
+				scale(1.05, 1) 
+				skew(0deg, 0deg)
+				; 
+}
+
+/*----------------------------inner 6---------------------------*/
+.triangle-wrapper1 > span:nth-of-type(6) {
+	top: 13px;
+	left: 59.4px;
+	height: 2px;
+	width: 36.0px;
+	transform:	rotate(35.5deg) 
+				scale(.9, 1) 
+				skew(0deg, 0deg)
+				; 
+}
+
+/*----------------------------inner 7---------------------------*/
+.triangle-wrapper1 > span:nth-of-type(7) {
+	top: 13px;
+	left: 53.5px;
+	height: 2px;
+	width: 38px;
+	transform:	rotate(45deg) 
+				scale(1, 1) 
+				skew(0deg, 0deg); 
+}
+
+
+/*---------------------------------------------------------------*/
+
+/*----------------------------- TRAPEZOID-BIG ----------------------------*/
+.figure-wrapper .trapezoid-wrapper {
+	width: 100%;
+	height: 110px;
+	background: transparent;
+	position: absolute;
+	top: 90.0px;
+	left: 16.5px;
+	transform:	translate(-18.5px, -20px)
+				scale(-.75, 1)
+				rotate(269deg)
+				scale(.40, .64)
+				skew(-14deg, -34deg)
+				scale(-1, .99);
+}
+
+.trapezoid-wrapper > span {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+}
+
+.trapezoid-wrapper > span > span {
+	position: absolute;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	height: 10px;
+	width: 63px;
+	border-bottom-width: 80px;
+	border-bottom-style: solid;
+}
+
+.trapezoid-wrapper > span > span:first-of-type {
+	/* Specifies the "complete" border color 
+	of every figureobject in the trapezoid_top
+	figure. */
+	border-bottom-color: #ec6843;
+}		
+
+.trapezoid-wrapper > span > span:last-of-type {
+	/* Specifies the fill color of all the
+	trapezoids. */
+	border-bottom-color: black;
+}
+
+/*----------------------------inner 1---------------------------*/
+.trapezoid-wrapper > span:nth-of-type(1) {
+	top: 20px;
+	left: 5px;
+}	
+
+/* Specifies the thickness of the borders:  */
+
+.trapezoid-wrapper > span:nth-of-type(1) > span:last-of-type {
+	transform: translate(1px, 0px) scale(.90, .89);
+}
+
+/*----------------------------inner 2---------------------------*/
+.trapezoid-wrapper > span:nth-of-type(2) {
+	top: 19px;
+	left: 19px;
+	transform: rotate(10deg) scale(.8, .83); 
+}
+
+.trapezoid-wrapper > span:nth-of-type(2) > span:last-of-type {
+	transform: scale(.86, .88)
+}
+
+/*----------------------------inner 3---------------------------*/
+.trapezoid-wrapper > span:nth-of-type(3) {
+	top: 21px;
+	left: 34px;
+	transform: rotate(25deg) scale(.6, .70); 
+}
+
+.trapezoid-wrapper > span:nth-of-type(3) > span:last-of-type {
+	transform: scale(.85, .85)
+}
+
+/*----------------------------inner 4---------------------------*/
+.trapezoid-wrapper > span:nth-of-type(4) {
+	top: 26px;
+	left: 48px;
+	transform:	skew(0deg, 0deg) 
+				rotate(40deg) 
+				scale(.4, .55) 
+				skew(0deg, 5deg)
+				; 
+}
+
+.trapezoid-wrapper > span:nth-of-type(4) > span:last-of-type {
+	transform: scale(.80, .81) translate(0, 0.9px) 
+}
+
+/*----------------------------inner 5---------------------------*/
+.trapezoid-wrapper > span:nth-of-type(5) {
+	top: 32.2px;
+	left: 53.8px;
+	transform:	skew(0deg, 0deg) 
+				rotate(53deg) 
+				scale(.28, .42) 
+				skew(0deg, 8deg)
+				; 
+}
+
+.trapezoid-wrapper > span:nth-of-type(5) > span:last-of-type {
+	transform: scale(.78, .74) translate(0, 0.9px) 
+}
+
+/*----------------------------inner 6---------------------------*/
+.trapezoid-wrapper > span:nth-of-type(6) {
+	top: 39.6px;
+	left: 55.9px;
+	transform:	skew(0deg, 0deg) 
+				rotate(68deg) 
+				scale(.18, .28) 
+				skew(0deg, 8deg)
+				; 
+}
+
+.trapezoid-wrapper > span:nth-of-type(6) > span:last-of-type {
+	transform: scale(.56, .64) translate(0, 0.9px) 
+}
+
+/*----------------------------inner 7---------------------------*/
+.trapezoid-wrapper > span:nth-of-type(7) {
+	top: 45px;
+	left: 55.2px;
+	transform:	skew(0deg, 0deg) 
+				rotate(80deg) 
+				scale(.10, .16) 
+				skew(0deg, 14deg)
+				; 
+}
+
+.trapezoid-wrapper > span:nth-of-type(7) > span:last-of-type {
+	transform: scale(.4, .5) translate(0, 0.9px) 
+}
+
+/*----------------------------inner 8---------------------------*/
+.trapezoid-wrapper > span:nth-of-type(8) {
+	top: 49.6px;
+	left: 54.8px;
+	transform:	skew(0deg, 0deg) 
+				rotate(100deg) 
+				scale(.045, .07) 
+				skew(0deg, 14deg)
+				; 
+}
+
+.trapezoid-wrapper > span:nth-of-type(8) > span:last-of-type {
+	transform: scale(.25, .3) translate(0, 0.9px) 
+}
+
+/*---------------------------------------------------------------*/
+
+/*----------------------------- TRIANGLE-FILLER 2 ----------------------------*/
+.figure-wrapper .triangle-fill-2-wrapper {
+	width: 100%;
+	height: 50px;
+	background: transparent;
+	top: 193px;
+	left:-20.0px;
+	position: absolute;
+	transform:	rotate(-9.9deg)
+				scale(1.08, 1.05);
+}
+
+.triangle-fill-2-wrapper > span {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 4px;
+	left: 19px;
+}
+
+.triangle-fill-2-wrapper > span:first-of-type > span {
+	position: absolute;
+	height: 0;
+	width: 0;
+	background: transparent;
+
+	border-bottom-width: 40px;
+	border-bottom-style: solid;
+	border-bottom-color: #ec6843;
+
+	border-left-width: 40px; 
+	border-left-style: solid; 
+	border-left-color: transparent;
+}
+
+.triangle-fill-2-wrapper > span:first-of-type > span:first-of-type {
+	/* Specifies the "complete" border color 
+	of every figureobject in the trapezoid_top
+	figure. */
+	border-bottom-color: #ec6843;
+}
+
+.triangle-fill-2-wrapper > span:first-of-type > span:last-of-type {
+	/* Specifies the fill color of all the
+	trapezoids. */
+	border-bottom-color: black;
+}
+
+.triangle-fill-2-wrapper > span > span {
+	position: absolute;
+	background: #ec6843;			
+	width: 2px;
+}
+
+/*----------------------------inner 1---------------------------*/
+.triangle-fill-2-wrapper > span:first-of-type {
+	top: -3.2px;
+	left: -0.2px;
+	transform: scale(.99, .99) skew(0, 10deg);
+}	
+
+.triangle-fill-2-wrapper > span:first-of-type > span:last-of-type {
+	/* Specifies the thickness of the borders */
+	border-left-width: 39px;	
+	transform:	skew(-0deg, 0deg) 
+				translate(2.4px, 0.6px) 
+				scale(.86, .85)
+				;
+}
+
+/*----------------------------inner 2---------------------------*/
+.triangle-fill-2-wrapper > span:nth-of-type(2) > span {
+	top: 5px;
+	left: 36.5px;	
+	height: 33px;
+	transform: rotate(-7deg);
+}	
+
+/*----------------------------inner 3---------------------------*/
+.triangle-fill-2-wrapper > span:nth-of-type(3) > span {
+	top: 9px;
+	left: 34px;
+	height: 30px;
+	transform: rotate(-15deg);
+}
+
+/*----------------------------inner 4---------------------------*/
+.triangle-fill-2-wrapper > span:nth-of-type(4) > span {
+	top: 12px;
+	left: 32px;
+	height: 28px;
+	transform: rotate(-26deg);
+}
+
+/*----------------------------inner 5---------------------------*/
+.triangle-fill-2-wrapper > span:nth-of-type(5) > span {
+	top: 14px;
+	left: 29.5px;
+	height: 26px;
+	transform: rotate(-38deg);
+}
+
+/*----------------------------inner 6---------------------------*/
+.triangle-fill-2-wrapper > span:nth-of-type(6) > span {
+	top: 15.5px;
+	left: 27px;
+	height: 26px;
+	transform: rotate(-50deg);
+}
+
+/*----------------------------inner 7---------------------------*/
+.triangle-fill-2-wrapper > span:nth-of-type(7) > span {
+	top: 15.5px;
+	left: 24.5px;
+	height: 29px;
+	transform: rotate(-62deg);
+}
+
+/*----------------------------inner 8---------------------------*/
+.triangle-fill-2-wrapper > span:nth-of-type(8) > span {
+	top: 16px;
+	left: 23px;
+	height: 34px;
+	transform: rotate(-71deg);
+}
+
+
+
+/*----------------------------- TRIANGLE-FILLER 3 ----------------------------*/
+.figure-wrapper .triangle-fill-3-wrapper {
+	width: 100%;
+	height: 50px;
+	background: transparent;
+	position: absolute;
+	top: 189px;
+	left: -37.5px;
+	transform:	rotate(-5.0deg) scale(-1.10, -1.05);
+}
+
+.triangle-fill-3-wrapper > span {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 3px;
+	left: 21.2px;
+	transform:	scale(.96, 1);
+}
+
+.triangle-fill-3-wrapper > span:first-of-type > span {
+	position: absolute;
+	height: 0;
+	width: 0;
+	background: transparent;
+
+	border-bottom-width: 42px;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+
+	border-left-width: 30px; 
+	border-left-style: solid; 
+	border-left-color: transparent;
+}
+
+.triangle-fill-3-wrapper > span > span {
+	position: absolute;
+	background: #ec6843;			
+	width: 2px;
+}
+/*----------------------------inner 1---------------------------*/
+.triangle-fill-3-wrapper > span:first-of-type {
+	top: -1.0px;
+	left: 6.6px;
+	transform:	scale(1, 1) 
+				skew(0deg, 3.5deg) 
+				rotate(8deg)
+				;
+}	
+
+.triangle-fill-3-wrapper > span:first-of-type > span:first-of-type {
+	/* Specifies the thickness of the borders */
+	transform: scale(1, 1);
+}
+
+/*----------------------------inner 2---------------------------*/
+.triangle-fill-3-wrapper > span:nth-of-type(2) > span {
+	top: 2px;
+	left: 34.9px;
+	height: 46px;
+	transform: rotate(5.8deg);
+}	
+
+/*----------------------------inner 3---------------------------*/
+.triangle-fill-3-wrapper > span:nth-of-type(3) > span {
+	top: 8px;
+	left: 31.5px;
+	height: 36px;
+	transform: rotate(-5.0deg);
+}
+
+/*----------------------------inner 4---------------------------*/
+.triangle-fill-3-wrapper > span:nth-of-type(4) > span {
+	top: 12px;
+	left: 29.1px;
+	height: 33px;
+	transform: rotate(-13deg);
+}
+
+/*----------------------------inner 5---------------------------*/
+.triangle-fill-3-wrapper > span:nth-of-type(5) > span {
+	top: 15px;
+	left: 26.5px;
+	height: 29px;
+	transform: rotate(-21deg);
+}
+
+/*----------------------------inner 6---------------------------*/
+.triangle-fill-3-wrapper > span:nth-of-type(6) > span {
+	top: 18px;
+	left: 23.5px;
+	height: 26px;
+	transform: rotate(-30.5deg);
+}
+
+/*----------------------------inner 7---------------------------*/
+.triangle-fill-3-wrapper > span:nth-of-type(7) > span {
+	top: 19.6px;
+	left: 22px;
+	height: 28px;
+	transform: rotate(-43deg);
+}
+
+/*----------------------------inner 8---------------------------*/
+.triangle-fill-3-wrapper > span:nth-of-type(8) > span {
+	top: 22.8px;
+	left: 20px;
+	height: 26px;
+	transform: rotate(-56deg);
+}
+
+/*----------------------------inner 9---------------------------*/
+.triangle-fill-3-wrapper > span:nth-of-type(9) > span {
+	top: 24.4px;
+	left: 16px;
+	height: 26px;
+	transform: rotate(-66deg);
+}
+
+
+/*----------------------------- TRIANGLE 2 -----------------------------*/
+
+.figure-wrapper .triangle2-wrapper {
+	width: 100%;
+	height: 210px;
+	background: transparent;
+	position: absolute;
+
+	/* has to be set */
+	left: 0px;
+}
+
+.triangle2-adjustment-1 {
+	transform:	
+				translate(-1.5px, 234.0px)
+				/* if the following setting are removed, the triangle
+				fits in the other direction and is smaller */
+				scale(-1.23, 1)
+				translate(41.5px, 0.3px)
+				;
+}
+
+.triangle2-adjustment-2 {
+	transform:	
+				translate(45.5px, 230.0px)
+				scale(1, 1)
+				rotate(-5.5deg)
+				;
+}
+
+.triangle2-wrapper > span {
+	position: absolute;
+
+	/* these are set conform measurements of the
+	outer triangle. Everything smaller will just
+	fit. */
+	height: 80px;
+	width: 65px;
+	background: transparent;
+}
+
+.triangle2-wrapper > span > span:first-of-type,
+.triangle2-wrapper > span > span:nth-of-type(2) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-left-style: solid;
+	border-top-style: solid;
+	border-left-color: transparent;
+	border-top-width: 39px;
+	border-left-width: 44px;
+	height: 0;
+	width: 0;
+}
+
+.triangle2-wrapper > span > span:first-of-type {
+	/* Specifies the "complete" border color 
+	of every figureobject */
+	border-top-color: #ec6843;
+}
+
+.triangle2-wrapper > span > span:nth-of-type(2) {
+	/* Specifies the fill color of all the
+	figures op this type. */
+	border-top-color: black;
+
+	/* Specifies the thickness of the borders */
+	transform: translate(3%, -4.1%) scale(.85, .85); 
+}
+
+/*----------------------------inner 1---------------------------*/
+.triangle2-wrapper > span:nth-of-type(1) {
+	top: 0px;
+	left: 0px;
+	transform: rotate(1deg); 
+}
+
+/*----------------------------inner 2---------------------------*/
+.triangle2-wrapper > span:nth-of-type(2) {
+	top: -8.4px;
+	left: -3.4px;
+	transform:	rotate(10deg) 
+				scale(.80, .71)
+				skew(0deg, -3deg)
+				; 
+}
+
+.triangle2-wrapper > span:nth-of-type(2) > span:nth-of-type(2) {
+	transform: translate(4.9%, -4.3%) scale(.79, .77); 
+}
+
+.triangle2-adjustment-1 > span:nth-of-type(2) {
+	transform:
+				rotate(11deg) 
+				scale(.80, .71)
+				skew(0deg, -3deg)
+				;
+}
+/*----------------------------inner 3---------------------------*/
+.triangle2-wrapper > span:nth-of-type(3) {
+	top: -14.8px;
+	left: -3.4px;
+	transform:	rotate(14deg) 
+				skew(-3deg, 0deg)
+				scale(.56, .47) 
+				; 
+}
+
+.triangle2-wrapper > span:nth-of-type(3) > span:nth-of-type(2) {
+	transform: translate(6.5%, -5.5%) scale(.73, .70); 
+}
+
+/*----------------------------inner 4---------------------------*/
+.triangle2-wrapper > span:nth-of-type(4) {
+	top: -20px;
+	left: -3px;
+	transform:	rotate(24deg) 
+				skew(-6deg, 0deg)
+				scale(.35, .28) 
+				; 
+}
+
+.triangle2-wrapper > span:nth-of-type(4) > span:nth-of-type(2) {
+	transform: translate(7.3%, -7.3%) scale(.66, .58); 
+}
+
+/*----------------------------inner 5---------------------------*/
+.triangle2-wrapper > span:nth-of-type(5) {
+	top: -21.9px;
+	left: -3.9px;
+	transform:	rotate(59deg) 
+				scale(.18, .14) 
+				skew(10deg, -26deg) 
+				translate(4%, -21%)
+				; 
+}
+
+.triangle2-wrapper > span:nth-of-type(5) > span:nth-of-type(2) {
+	transform: translate(10.8%, -9.0%) scale(.4, .4); 
+}
+
+/*----------------------------inner 6---------------------------*/
+.triangle2-wrapper > span:nth-of-type(6) {
+	top: -25.5px;
+	left: -1.5px;
+	transform:	rotate(75deg) 
+				scale(.07, .05) 
+				skew(0deg, 0deg) 
+				translate(4%, -21%)
+				; 
+}
+
+.triangle2-wrapper > span:nth-of-type(6) > span:nth-of-type(2) {
+	transform: translate(10.8%, -9.0%) scale(0, 0); 
+}
+
+/*---------------------------------------------------------------*/
