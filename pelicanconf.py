@@ -76,7 +76,7 @@ MENUITEMS = (
     ('Projects', '/category/projects.html'),
     ('Music', '/category/music.html'),
     ('Publications', '/pages/publications.html'),
-    ('About', '/pages/about.html'),
+    ('About', '/pages/About.html'),
 )
 
 # Feed generation is usually not desired when developing
@@ -94,7 +94,7 @@ BANNER_ALL_PAGES = False
 
 # Blogroll
 # LINKS = (
-#     ('Resume', '#'),
+#     ('aother link', '#'),
 # )
 
 # Social widget
