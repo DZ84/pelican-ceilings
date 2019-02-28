@@ -20,7 +20,6 @@ Eventhough I'm more interested in backend development, I still felt I needed to 
 			min-height: 450px;
 			text-align; center;
 			background: black;
-
 			">
 	<div style="float: left; width: 50%; height: 10px;"></div>
 	{% from 'nutty-mind.html' import fig_wrap %}

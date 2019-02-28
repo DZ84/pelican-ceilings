@@ -5,6 +5,9 @@ date: 2019-02-14
 modified: 2019-02-14
 Sortorder: 001
 
+<div class="container-for-dots">
+	<div class="ref_point"></div>
+</div>
 
 This project is part of a larger project, which involves creating an alive version of a drawing I saw. But to be able to achieve this, the dots involved have to be able to detect eachother and handle collisions accordingly. This turned out to be quite challenging.
 
@@ -23,3 +26,14 @@ Some challenges in this projects were:
 To visit the site click [here](https://dzet.github.io).
 The repository can be found [here](https://github.com/DZet/flying-dots).
 
+{% from 'flying_dots.html' import flying_dots %}
+{{ flying_dots() }}
+
+<script>
+
+	var el = document.getElementById("together")
+
+    var ref_point = document.getElementsByClassName("ref_point")[0]
+    ref_point.parentNode.insertBefore(el, null)
+
+</script>
