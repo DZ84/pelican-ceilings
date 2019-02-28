@@ -20,6 +20,6 @@ Some challenges in this projects were:
 .
 
 <br>
-To visit the site click [here](https:dzet.github.io).
+To visit the site click [here](https://dzet.github.io).
 The repository can be found [here](https://github.com/DZet/flying-dots).
 

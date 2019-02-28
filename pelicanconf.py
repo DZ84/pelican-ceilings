@@ -5,11 +5,11 @@ from __future__ import unicode_literals
 AUTHOR = 'Dennis Zethof'
 SITENAME = 'Dennis Zethof'
 
-SITEURL = 'localhost:8000'
+SITEURL = 'https://philo-b.xyz/pelican_ceilings'
 
-# needed to get siteurl to work, alhough I'm not
-# sure how much I really need that.
-RELATIVE_URLS = True 
+# turned it off since it doesn't add anything at
+# the moment.
+# RELATIVE_URLS = True 
 
 PATH = 'content'
 
@@ -73,11 +73,16 @@ DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
 
 MENUITEMS = (
-    ('Projects', '/category/projects.html'),
-    ('Music', '/category/music.html'),
-    ('Publications', '/pages/publications.html'),
-    ('About', '/pages/about.html'),
+    ('Projects', '/pelican_ceilings/category/projects.html'),
+    ('Music', '/pelican_ceilings/category/music.html'),
+    ('Publications', '/pelican_ceilings/pages/publications.html'),
+    ('About', '/pelican_ceilings/pages/About.html'),
 )
+
+DISQUS_SITENAME = 'site-ceilings'
+# DISQUS_SITENAME = 'philo-b.xyz'
+GOOGLE_ANALYTICS_UNIVERSAL = 'UA-135283341-1'
+GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY = 'auto' 
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

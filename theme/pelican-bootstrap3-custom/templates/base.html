@@ -122,6 +122,7 @@
               title="{{ SITENAME }} {{ category }} ATOM Feed"/>
     {%- endif %}
 
+	{% include 'includes/ga.html' %}
 </head>
 <body>
 
@@ -255,7 +256,6 @@
 {% endif %}
 {% include 'includes/sidebar/github-js.html' %}
 {% include 'includes/disqus_script.html' %}
-{% include 'includes/ga.html' %}
 {% include 'includes/piwik.html' %}
 
 {% if 'liquid_tags.notebook' in PLUGINS %}

@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+    pelican_env:
+        restart: always
+        # image needs to be specified, or it goes for default naming.
+        image: pelican_image 
+        container_name: pelican_env
+        build:
+            context: ./
+            dockerfile: ./Dockerfile
+
+        # stdin_open: true
+        # tty: true
+

@@ -39,6 +39,6 @@ The specs are:
 .
 
 <br>
-To visit the site click [here](https:philo-b.xyz).
+To visit the site click [here](https://philo-b.xyz).
 The repository can be found [here](https://github.com/DZet/philo-b.xyz).
 
