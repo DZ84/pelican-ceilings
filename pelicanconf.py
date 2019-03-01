@@ -74,7 +74,7 @@ DISPLAY_PAGES_ON_MENU = False
 
 MENUITEMS = (
     ('Projects', '/pelican_ceilings/category/projects.html'),
-    ('Music', '/pelican_ceilings/category/music.html'),
+#     ('Music', '/pelican_ceilings/category/music.html'),
     ('Publications', '/pelican_ceilings/pages/publications.html'),
     ('About', '/pelican_ceilings/pages/About.html'),
 )
