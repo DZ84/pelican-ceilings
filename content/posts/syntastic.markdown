@@ -10,7 +10,7 @@ syntax checker to work for Javascript
 I came across the following errors 
 (the numbers are not specific to the errors): 
 
-```vim
+```text
 syntastic: 9.418609: CacheErrors: Checker javascript/closurecompiler is not available
 syntastic: 9.418964: CacheErrors: no checkers available for javascript
 ```
