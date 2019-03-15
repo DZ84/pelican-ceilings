@@ -73,6 +73,7 @@ DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
 
 MENUITEMS = (
+    ('Posts', '/pelican_ceilings/category/posts.html'),
     ('Projects', '/pelican_ceilings/category/projects.html'),
 #     ('Music', '/pelican_ceilings/category/music.html'),
     ('Publications', '/pelican_ceilings/pages/publications.html'),
@@ -107,6 +108,7 @@ SOCIAL = (
     ('Github', 'https://github.com/dzet'),
     ('LinkedIn', 'https://www.linkedin.com/in/denniszethof'),
     ('Happycow', 'https://www.happycow.net/members/profile/DZet/'),
+	('Dennis&Roben', 'http://www.dennisenroben.nl'),
 )
 
 DEFAULT_PAGINATION = 10
