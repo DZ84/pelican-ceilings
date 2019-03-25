@@ -9,7 +9,7 @@ SITEURL = 'https://philo-b.xyz/pelican_ceilings'
 
 # turned it off since it doesn't add anything at
 # the moment.
-# RELATIVE_URLS = True 
+# RELATIVE_URLS = True
 
 PATH = 'content'
 
@@ -23,13 +23,13 @@ BOOTSTRAP_THEME = 'flatly'
 ##################################################
 ''' PLUGIN NOTES:
 
-    pelican_javascript: 
-        - makes use of content/css and content/js, 
+    pelican_javascript:
+        - makes use of content/css and content/js,
         subfolders don't seem to work.
         - I don't know whether this plugin or
         pelican transfers all files content/css
         to output, but in any case I don't have to
-        do that manually (via STATIC_PATHS and 
+        do that manually (via STATIC_PATHS and
         EXTRA_PATH_METADATA).
 '''
 PLUGIN_PATHS = ['./plugins', ]
@@ -64,7 +64,7 @@ CUSTOM_CSS = 'css/custom.css'
 # ARTICLE_EXCLUDES = ['templates/includes/nutty-mind.html']
 
 # ARTICLE_ORDER_BY = 'date'
-# PAGE_ORDER_BY = 'sortorder' 
+# PAGE_ORDER_BY = 'sortorder'
 # PAGES_SORT_ATTRIBUTE = 'sortorder'
 # REVERSE_CATEGORY_ORDER = False
 # NEWEST_FIRST_ARCHIVES = False
@@ -108,7 +108,7 @@ SOCIAL = (
     ('Github', 'https://github.com/dzet'),
     ('LinkedIn', 'https://www.linkedin.com/in/denniszethof'),
     ('Happycow', 'https://www.happycow.net/members/profile/DZet/'),
-	('Dennis&Roben', 'http://www.dennisenroben.nl'),
+    ('Dennis&Roben', 'http://www.dennisenroben.nl'),
 )
 
 DEFAULT_PAGINATION = 10
