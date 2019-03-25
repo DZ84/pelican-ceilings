@@ -94,7 +94,7 @@ AUTHOR_FEED_RSS = None
 
 
 # link has to point for resulting situation in output
-BANNER = './images/gg_horizontal.jpg'
+BANNER = './images/gg_horizontal_aligned_1.jpg'
 # BANNER_SUBTITLE = 'THE subtitles'
 BANNER_ALL_PAGES = False
 
