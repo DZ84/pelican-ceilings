@@ -6,6 +6,7 @@ AUTHOR = 'Dennis Zethof'
 SITENAME = 'Dennis Zethof'
 
 SITEURL = 'https://philo-b.xyz/pelican_ceilings'
+SITEURL = 'http://localhost:8000'
 
 # turned it off since it doesn't add anything at
 # the moment.
@@ -69,17 +70,6 @@ CUSTOM_CSS = 'css/custom.css'
 # REVERSE_CATEGORY_ORDER = False
 # NEWEST_FIRST_ARCHIVES = False
 
-DISPLAY_CATEGORIES_ON_MENU = False
-DISPLAY_PAGES_ON_MENU = False
-
-MENUITEMS = (
-    ('Posts', '/pelican_ceilings/category/posts.html'),
-    ('Projects', '/pelican_ceilings/category/projects.html'),
-#     ('Music', '/pelican_ceilings/category/music.html'),
-    ('Publications', '/pelican_ceilings/pages/publications.html'),
-    ('About', '/pelican_ceilings/pages/About.html'),
-)
-
 DISQUS_SITENAME = 'site-ceilings'
 # DISQUS_SITENAME = 'philo-b.xyz'
 GOOGLE_ANALYTICS_UNIVERSAL = 'UA-135283341-1'
@@ -93,10 +83,34 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 
-# link has to point for resulting situation in output
-BANNER = './images/gg_horizontal_aligned_1.jpg'
-# BANNER_SUBTITLE = 'THE subtitles'
-BANNER_ALL_PAGES = False
+DISPLAY_CATEGORIES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = False
+
+MENUITEMS = (
+    ('Posts', '/pelican_ceilings/category/posts.html'),
+    ('Projects', '/pelican_ceilings/category/projects.html'),
+#     ('Music', '/pelican_ceilings/category/music.html'),
+    ('Publications', '/pelican_ceilings/pages/publications.html'),
+    ('About', '/pelican_ceilings/pages/About.html'),
+)
+
+'''
+made absolete by adjustments:
+
+    BANNER
+    BANNER_ALL_PAGES
+
+    perhaps in the future:
+    BANNER_SUBTITLE 
+
+'''
+
+BANNERS_PRESENT = True
+CATEGORY_BANNERS = (
+    ('main', './images/gg_horizontal_aligned_1.jpg'),
+    ('posts', './images/red_ceiling.jpg'),
+    ('projects', './images/white_side.jpg'),
+)
 
 # Blogroll
 # LINKS = (

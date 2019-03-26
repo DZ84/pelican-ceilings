@@ -3,5 +3,16 @@
 {% block canonical_rel %}<link rel="canonical" href="{{ SITEURL }}">{% endblock %}
 
 {% block banner %}
-	{% include 'includes/banner.html' %}
+
+    {% for category, banner_url in CATEGORY_BANNERS %}
+
+        {% if category == 'main' and not BANNER_MAIN %}
+            {% set BANNER_MAIN = banner_url %}
+            {% include 'includes/banner.html' %}
+        {% endif %}
+
+    {% endfor %}
+
+
+
 {% endblock %}
