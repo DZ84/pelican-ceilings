@@ -1,14 +1,5 @@
 {% extends "base.html" %}
 
-{% block banner %}
-    {% for category, banner_url in CATEGORY_BANNERS %}
-        {% if category == articles.0.category and not BANNER_MAIN %}
-            {% set BANNER_MAIN = banner_url %}
-            {% include 'includes/banner.html' %}
-        {% endif %}
-    {% endfor %}
-{% endblock %}
-
 {% block content %}
     {% if articles %}
         {% for article in (articles_page.object_list if articles_page else articles) %}

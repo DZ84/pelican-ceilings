@@ -197,10 +197,13 @@
     </div>
 </div> <!-- /.navbar -->
 
+
 <!-- Banner -->
-{% if BANNERS_PRESENT %}
-    {% block banner %}{% endblock %}
-{% endif %}
+{% for category, banner_url in CUSTOM_BANNERS %}
+    {% if category == page_name %}
+        {% include 'includes/banner.html' %}
+    {% endif %}
+{% endfor %}
 <!-- End Banner -->
 
 

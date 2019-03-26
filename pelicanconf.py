@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Dennis Zethof'
 SITENAME = 'Dennis Zethof'
 
-SITEURL = 'https://philo-b.xyz/pelican_ceilings'
+# SITEURL = 'https://philo-b.xyz/pelican_ceilings'
 SITEURL = 'http://localhost:8000'
 
 # turned it off since it doesn't add anything at
@@ -50,26 +50,6 @@ JINJA2CONTENT_TEMPLATES = ['templates/includes']
 
 CUSTOM_CSS = 'css/custom.css'
 
-#     'css',
-#   ]
-# EXTRA_PATH_METADATA = {
-#     'extra/custom.css': {'path': 'static/custom.css'},
-#     'css/nutty-mind.css': {'path': 'static/nutty-mind.css'}
-#   }
-
-
-# attempt to solve error
-# READERS = {'html': None}
-# STATIC_PATHS = ['templates/includes']
-# PAGE_EXCLUDES = ['templates/includes/nutty-mind.html']
-# ARTICLE_EXCLUDES = ['templates/includes/nutty-mind.html']
-
-# ARTICLE_ORDER_BY = 'date'
-# PAGE_ORDER_BY = 'sortorder'
-# PAGES_SORT_ATTRIBUTE = 'sortorder'
-# REVERSE_CATEGORY_ORDER = False
-# NEWEST_FIRST_ARCHIVES = False
-
 DISQUS_SITENAME = 'site-ceilings'
 # DISQUS_SITENAME = 'philo-b.xyz'
 GOOGLE_ANALYTICS_UNIVERSAL = 'UA-135283341-1'
@@ -96,20 +76,17 @@ MENUITEMS = (
 
 '''
 made absolete by adjustments:
-
     BANNER
     BANNER_ALL_PAGES
 
     perhaps in the future:
-    BANNER_SUBTITLE 
-
+    BANNER_SUBTITLE
 '''
 
-BANNERS_PRESENT = True
-CATEGORY_BANNERS = (
-    ('main', './images/gg_horizontal_aligned_1.jpg'),
-    ('posts', './images/red_ceiling.jpg'),
-    ('projects', './images/white_side.jpg'),
+CUSTOM_BANNERS = (
+    ('index', './images/gg_horizontal_aligned_1.jpg'),
+    ('category/posts', './images/red_ceiling.jpg'),
+    ('category/projects', './images/white_side.jpg'),
 )
 
 # Blogroll

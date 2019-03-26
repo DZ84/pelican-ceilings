@@ -1,12 +1,11 @@
 <style>
 	#banner{
-	    background-image:url("{{ SITEURL}}/{{ BANNER_MAIN }}");
+	    background-image:url("{{ SITEURL}}/{{ banner_url }}");
 	}
 </style>
 
 <div class="container">
     <div id="banner" style="min-height: 850px; margin-top: -250px;">
-        <!--background-image:url({{ SITEURL}}/{{ BANNER_MAIN }});"-->
 		<div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
 			<div class="copy">
 				{% if BANNER_SUBTITLE %}
