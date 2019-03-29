@@ -29,7 +29,7 @@ Eventhough I'm more interested in backend development, I still felt I needed to 
 
 The example I had seen before was drawn on a wall in a hostel:
 
-<img src="./images/projects/nutty-mind/example.jpg">
+<img src="./images/projects/nutty-mind/example_cropped_2.jpg">
 
 Obviously CSS is not the best technique to create such an image, it is too fragile. But it was interesting none the less.
 

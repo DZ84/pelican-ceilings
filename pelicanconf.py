@@ -84,9 +84,10 @@ made absolete by adjustments:
 '''
 
 CUSTOM_BANNERS = (
-    ('index', './images/gg_horizontal_aligned_1.jpg'),
-    ('category/posts', './images/red_ceiling.jpg'),
-    ('category/projects', './images/white_side.jpg'),
+    # ('index', './images/banners/gg_horizontal_aligned_1.jpg'),
+    ('index', './images/banners/gg_horizontal_aligned_2c4_cropped.jpg'),
+    ('category/posts', './images/banners/red_ceiling.jpg'),
+    ('category/projects', './images/banners/white_side.jpg'),
 )
 
 # Blogroll
@@ -105,5 +106,5 @@ SOCIAL = (
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
 
