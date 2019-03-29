@@ -199,17 +199,14 @@
 
 
 <!-- Banner -->
-{% set banner = namespace(found=false, b_url='') %}
+{% set banner = namespace(found=false) %}
 {% for category, banner_url in CUSTOM_BANNERS %}
     {% if category == page_name and not found %}
         {% set banner.found = true %}
-        {% set banner.b_url = banner_url %}
+        {% set BANNER = banner_url %}
+        {% include 'includes/banner.html' %}
     {% endif %}
 {% endfor %}
-
-{% if banner.found %} 
-    {% include 'includes/banner.html' %}
-{% endif %}
 <!-- End Banner -->
 
 
@@ -258,7 +255,7 @@
     <script src="{{ SITEURL }}/{{ CUSTOM_JS }}"></script>
 {% endif %}
 
-{% if banner.found %}
+{% if BANNER %}
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bodypadding.js"></script>
 {% endif %}
 {% include 'includes/sidebar/github-js.html' %}
