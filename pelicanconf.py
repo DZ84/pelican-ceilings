@@ -86,8 +86,8 @@ made absolete by adjustments:
 CUSTOM_BANNERS = (
     # ('index', './images/banners/gg_horizontal_aligned_1.jpg'),
     ('index', './images/banners/gg_horizontal_aligned_2c4_cropped.jpg'),
-    ('category/posts', './images/banners/red_ceiling.jpg'),
-    ('category/projects', './images/banners/white_side.jpg'),
+    ('category/posts', './images/banners/white_side.jpg'),
+    ('category/projects', './images/banners/rome.jpg'),
 )
 
 # Blogroll

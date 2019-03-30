@@ -4,7 +4,6 @@ category: projects
 date: 2019-02-14
 modified: 2019-02-14
 stylesheets: nutty-mind.css
-Sortorder: 001
 
 Eventhough I'm more interested in backend development, I still felt I needed to practice my CSS skills. It can be fun, and comes in handy all the time. As practice I tried to copy a certain style I saw in a painting, which resulted in:
 

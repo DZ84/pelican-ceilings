@@ -1,0 +1,25 @@
+
+
+{% macro code_snippets() -%}
+
+# snippet 1:
+
+{% if BANNER and BANNER_ALL_PAGES %}
+    {% include 'includes/banner.html' %}
+{% elif BANNER and not BANNER_ALL_PAGES %}
+    {% block banner %}{% endblock %}
+{% endif %}
+
+## snippet 2:
+
+{% if BANNER %}
+    <script src="{{ SITEURL }}/{{
+    THEME_STATIC_DIR}}/js/bodypadding.js"></script>
+{% endif %}
+
+{%- endmacro %}
+
+
+{% macro code_snippets2() -%}
+    <div>talking</div>
+{%- endmacro %}
