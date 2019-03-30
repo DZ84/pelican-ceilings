@@ -3,7 +3,6 @@ slug: differentbanners
 category: posts
 date: 2019-03-29
 modified: 2019-03-29
-javascripts: different_banners.js
 
 This site is generated through Pelican 4.0.1 with the Pelican-Bootstrap3 theme. 
 
@@ -36,17 +35,39 @@ pip install Jinja2==2.10 --upgrade
 In your theme/pelican-bootstrap3/templates/ folder there is a base.html file.
 In it you will find the following two snippets of code:
 
-<div id="code_snippets_1" class="highlight"></div>
+```bash
+{% raw %}
+# Snippet 1
+<!-- Banner -->
+{% if BANNER and BANNER_ALL_PAGES %}
+    {% include 'includes/bannerhtml' %}
+{% elif BANNER and not BANNER_ALL_PAGES %}
+    {% block banner %}{% endblock %}
+{% endif %}
+<!-- End Banner -->
+
+
+# Snippet 2
+{% if BANNER %}
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR
+    }}/js/bodypaddingjs"></script>
+{% endif %}
+
+{% endraw %}
+```
+
 
 fillertext
 
 ```html
 # Snippet 1
+<!-- Banner -->
 {.% if BANNER and BANNER_ALL_PAGES %.}
     {.% include 'includes/banner.html' %.}
 {.% elif BANNER and not BANNER_ALL_PAGES %.}
     {.% block banner %.}{.% endblock %.}
 {.% endif %.}
+<!-- End Banner -->
 
 # Snippet 2
 {.% if BANNER %.}
@@ -65,6 +86,7 @@ pip install Jinja2==2.10 --upgrade
 ```python
 <script>src="{.{ SITEURL }.}/{.{ THEME_STATIC_DIR }.}/js/bodypadding.js"</script>
 ```
+src="{{ SITEURL }}/{.{ THEME_STATIC_DIR }.}/js/bodypadding.js"
 
 texty stuff
 <div class="highlight">
@@ -73,36 +95,32 @@ texty stuff
     </p>
 </div>
 
-<script>
-
-    // there is a method much more comprehensive than this,
-    // but this does seem to cover the necessity.
-    document.addEventListener("DOMContentLoaded", function(event) {
-
-        var regex_mode = 'gi'
-        // Patterns to replace
-        var replaceables = [
-            [/\{\.\{/, '\{\{'], 
-            [/\}\.\}/, '\}\}'],
-            [/\{\.\%/, '\{\%'], 
-            [/\%\.\}/, '\%\}'],
-        ]
-
-        var highlights = document.getElementsByClassName('highlight')
-
-        for (var hl=0;hl<highlights.length;hl++) {
-
-            for (var p=0;p<replaceables.length;p++) {
-                var txt = highlights[hl].innerHTML
-                re = new RegExp(replaceables[p][0], regex_mode)
-                
-                highlights[hl].innerHTML = txt.replace(re, replaceables[p][1])
-
-                console.log('doing stuff')
-            }
-        }
-    });
-
-</script>
+<!--script>
+//
+//    // there is a method to trigger the js code that is much more 
+//    // comprehensive than this, but this seems to cover the necessity.
+//    document.addEventListener("DOMContentLoaded", function(event) {
+//        // Patterns to replace:
+//        var regex_flags = 'g'
+//        var replaceables = [
+//            [/\{\.\{/, '\{\{'], 
+//            [/\}\.\}/, '\}\}'],
+//            [/\{\.\%/, '\{\%'], 
+//            [/\%\.\}/, '\%\}'],
+//        ]
+//
+//        var highlights = document.getElementsByClassName('highlight')
+//
+//        for (var hl=0;hl<highlights.length;hl++) {
+//            for (var p=0;p<replaceables.length;p++) {
+//                re = new RegExp(replaceables[p][0], regex_flags)
+//                
+//                var txt = highlights[hl].innerHTML
+//                highlights[hl].innerHTML = txt.replace(re, replaceables[p][1])
+//            }
+//        }
+//    })
+//
+//</script-->
 ################
 
