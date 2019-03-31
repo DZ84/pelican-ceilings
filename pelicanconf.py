@@ -5,8 +5,8 @@ from __future__ import unicode_literals
 AUTHOR = 'Dennis Zethof'
 SITENAME = 'Dennis Zethof'
 
-# SITEURL = 'https://philo-b.xyz/pelican_ceilings'
-SITEURL = 'http://localhost:8000'
+SITEURL = 'https://philo-b.xyz/pelican_ceilings'
+# SITEURL = 'http://localhost:8000'
 
 # turned it off since it doesn't add anything at
 # the moment.
