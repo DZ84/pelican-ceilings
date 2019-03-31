@@ -7,8 +7,8 @@ modified: 2019-03-31
 
 This site is generated through Pelican 4.0.1 with the Pelican-Bootstrap3 theme. 
 
-If you want different banners for different parts of your website you can add
-some customizability with the following steps:
+If you want different banners for different parts of your website you can
+do so by making the following adjustments:
 
 <script>
 <!--
@@ -73,7 +73,7 @@ Which you can replace with:
 <!-- Banner -->
 {% set banner = namespace(found=false) %}
 {% for category, banner_url in CUSTOM_BANNERS %}
-    {% if category == page_name and not found %}
+    {% if category == output_file and not found %}
         {% set banner.found = true %}
         {% set BANNER = banner_url %}
         {% include 'includes/banner.html' %}
@@ -110,14 +110,17 @@ banners:
 ```bash
 
 CUSTOM_BANNERS = (
-    ('index', './images/banners/gg_aligned_cropped.jpg'),
-    ('category/posts', './images/banners/my_own_picture.jpg'),
-    ('category/projects', './images/banners/some_other_picture.jpg'),
+    ('index.html', './images/banners/gg_aligned_cropped.jpg'),
+    ('category/posts.html', './images/banners/my_own_picture.jpg'),
+    ('category/projects.html', './images/banners/some_other_picture.jpg'),
+    ('pages/About.html', './images/banners/some_picture_about_you.JPG'),
+    ('differing-banners.html', './images/banners/picture_for_article.jpg'),
 )
 
 ```
 
-<br/>
+There is the index, categories, pages, and individual articles.
+
 <br/>
 Enjoy
 
