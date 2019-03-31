@@ -1,16 +1,24 @@
-title: Having multiple different banners 
-slug: differentbanners
+title: Differing banners with Pelican-Bootstrap3
+slug: differing-banners
 category: posts
-date: 2019-03-29
-modified: 2019-03-29
+date: 2019-03-31
+modified: 2019-03-31
+
 
 This site is generated through Pelican 4.0.1 with the Pelican-Bootstrap3 theme. 
 
 If you want different banners for different parts of your website you can add
 some customizability with the following steps:
 
-### - Make sure you have Jinja2 (>=2.10) installed
+<script>
+<!--
+	// This is pure padding that pelican won't execute but does consider when
+	// determining the size of the article in the homepage/index overview.
+-->
+</script>
+
 <br/>
+### **- Make sure you have Jinja2 (>=2.10) installed**
 
 The .10 stands for ten, so 2.9 will not be up to date. Check your version with:
 
@@ -29,10 +37,10 @@ pip install Jinja2 --upgrade
 # Or specify a version
 pip install Jinja2==2.10 --upgrade
 ```
+<br/>
+### **- Adjust some code in your template**
 
-### - Adjust some code in your template
-
-In your theme/pelican-bootstrap3/templates/ folder there is a base.html file.
+In your **theme/pelican-bootstrap3/templates/** folder there is a **'base.html'** file.
 In it you will find the following two snippets of code:
 
 ```bash
@@ -40,7 +48,7 @@ In it you will find the following two snippets of code:
 # Snippet 1
 <!-- Banner -->
 {% if BANNER and BANNER_ALL_PAGES %}
-    {% include 'includes/bannerhtml' %}
+    {% include 'includes/banner.html' %}
 {% elif BANNER and not BANNER_ALL_PAGES %}
     {% block banner %}{% endblock %}
 {% endif %}
@@ -56,71 +64,60 @@ In it you will find the following two snippets of code:
 {% endraw %}
 ```
 
+Which you can replace with:
 
-fillertext
+```bash
 
-```html
+{% raw %}
 # Snippet 1
 <!-- Banner -->
-{.% if BANNER and BANNER_ALL_PAGES %.}
-    {.% include 'includes/banner.html' %.}
-{.% elif BANNER and not BANNER_ALL_PAGES %.}
-    {.% block banner %.}{.% endblock %.}
-{.% endif %.}
+{% set banner = namespace(found=false) %}
+{% for category, banner_url in CUSTOM_BANNERS %}
+    {% if category == page_name and not found %}
+        {% set banner.found = true %}
+        {% set BANNER = banner_url %}
+        {% include 'includes/banner.html' %}
+    {% endif %}
+{% endfor %}
 <!-- End Banner -->
 
 # Snippet 2
-{.% if BANNER %.}
-    <script src="{.{ SITEURL }.}/{.{ THEME_STATIC_DIR
-    }.}/js/bodypadding.js"></script>
-{.% endif %.}
+{% if banner.found %}
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR
+    }}/js/bodypadding.js"></script>
+{% endif %}
+
+{% endraw %}
 ```
-more fillertext
+
+There is also some banner related clutter in **'index.html'** that you can remove if you want to do
+it correctly. And, if you're somehow bothered by the **sitename** appearing on your banner,
+you can remove the **{% raw %} '{{ sitename }}' {% endraw %}** tag from the **'includes/banner.html'** file.
+
+
+<br/>
+### **- Alter your pelicanconf.py**
+
+Remove the following options completely from your **'pelicanconf.py'** file:
+
+* BANNER
+* BANNER_ALL_PAGES
+
+<br/>
+And you can now add the following code for some more options concerning you
+banners:
 
 ```bash
-# Should update to the most recent version
-pip install Jinja2 --upgrade
-# Or specify a version
-pip install Jinja2==2.10 --upgrade
-```
-```python
-<script>src="{.{ SITEURL }.}/{.{ THEME_STATIC_DIR }.}/js/bodypadding.js"</script>
-```
-src="{{ SITEURL }}/{.{ THEME_STATIC_DIR }.}/js/bodypadding.js"
 
-texty stuff
-<div class="highlight">
-    <p>
-        <script>src="{" + "{ SITEURL }.}/{.{ THEME_STATIC_DIR }.}/js/bodypadding.js"</script>
-    </p>
-</div>
+CUSTOM_BANNERS = (
+    ('index', './images/banners/gg_aligned_cropped.jpg'),
+    ('category/posts', './images/banners/my_own_picture.jpg'),
+    ('category/projects', './images/banners/some_other_picture.jpg'),
+)
 
-<!--script>
-//
-//    // there is a method to trigger the js code that is much more 
-//    // comprehensive than this, but this seems to cover the necessity.
-//    document.addEventListener("DOMContentLoaded", function(event) {
-//        // Patterns to replace:
-//        var regex_flags = 'g'
-//        var replaceables = [
-//            [/\{\.\{/, '\{\{'], 
-//            [/\}\.\}/, '\}\}'],
-//            [/\{\.\%/, '\{\%'], 
-//            [/\%\.\}/, '\%\}'],
-//        ]
-//
-//        var highlights = document.getElementsByClassName('highlight')
-//
-//        for (var hl=0;hl<highlights.length;hl++) {
-//            for (var p=0;p<replaceables.length;p++) {
-//                re = new RegExp(replaceables[p][0], regex_flags)
-//                
-//                var txt = highlights[hl].innerHTML
-//                highlights[hl].innerHTML = txt.replace(re, replaceables[p][1])
-//            }
-//        }
-//    })
-//
-//</script-->
-################
+```
+
+<br/>
+<br/>
+Enjoy
 

@@ -2,7 +2,7 @@ title: Syntastic and closure-compiler: no checkers available for Javascript
 slug: syntastic-closure-compiler
 category: posts 
 date: 2019-03-15
-modified: 2019-03-15
+modified: 2019-03-31
 
 
 While trying to get the Vim Syntastic 
@@ -16,7 +16,7 @@ syntastic: 9.418964: CacheErrors: no checkers available for javascript
 ```
 <br/>
 
-I tried to use the Google closure-compiler 
+At first I tried to use the Google closure-compiler 
 by unzipping the .jar file and setting the
 corresponding settings in my .vimrc like so:
 
