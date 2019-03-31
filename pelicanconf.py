@@ -5,11 +5,12 @@ from __future__ import unicode_literals
 AUTHOR = 'Dennis Zethof'
 SITENAME = 'Dennis Zethof'
 
-SITEURL = 'https://philo-b.xyz/pelican_ceilings'
+# SITEURL = 'https://philo-b.xyz/pelican_ceilings'
+SITEURL = 'http://localhost:8000'
 
 # turned it off since it doesn't add anything at
 # the moment.
-# RELATIVE_URLS = True 
+# RELATIVE_URLS = True
 
 PATH = 'content'
 
@@ -23,13 +24,13 @@ BOOTSTRAP_THEME = 'flatly'
 ##################################################
 ''' PLUGIN NOTES:
 
-    pelican_javascript: 
-        - makes use of content/css and content/js, 
+    pelican_javascript:
+        - makes use of content/css and content/js,
         subfolders don't seem to work.
         - I don't know whether this plugin or
         pelican transfers all files content/css
         to output, but in any case I don't have to
-        do that manually (via STATIC_PATHS and 
+        do that manually (via STATIC_PATHS and
         EXTRA_PATH_METADATA).
 '''
 PLUGIN_PATHS = ['./plugins', ]
@@ -49,37 +50,6 @@ JINJA2CONTENT_TEMPLATES = ['templates/includes']
 
 CUSTOM_CSS = 'css/custom.css'
 
-#     'css',
-#   ]
-# EXTRA_PATH_METADATA = {
-#     'extra/custom.css': {'path': 'static/custom.css'},
-#     'css/nutty-mind.css': {'path': 'static/nutty-mind.css'}
-#   }
-
-
-# attempt to solve error
-# READERS = {'html': None}
-# STATIC_PATHS = ['templates/includes']
-# PAGE_EXCLUDES = ['templates/includes/nutty-mind.html']
-# ARTICLE_EXCLUDES = ['templates/includes/nutty-mind.html']
-
-# ARTICLE_ORDER_BY = 'date'
-# PAGE_ORDER_BY = 'sortorder' 
-# PAGES_SORT_ATTRIBUTE = 'sortorder'
-# REVERSE_CATEGORY_ORDER = False
-# NEWEST_FIRST_ARCHIVES = False
-
-DISPLAY_CATEGORIES_ON_MENU = False
-DISPLAY_PAGES_ON_MENU = False
-
-MENUITEMS = (
-    ('Posts', '/pelican_ceilings/category/posts.html'),
-    ('Projects', '/pelican_ceilings/category/projects.html'),
-#     ('Music', '/pelican_ceilings/category/music.html'),
-    ('Publications', '/pelican_ceilings/pages/publications.html'),
-    ('About', '/pelican_ceilings/pages/About.html'),
-)
-
 DISQUS_SITENAME = 'site-ceilings'
 # DISQUS_SITENAME = 'philo-b.xyz'
 GOOGLE_ANALYTICS_UNIVERSAL = 'UA-135283341-1'
@@ -93,10 +63,32 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 
-# link has to point for resulting situation in output
-BANNER = './images/gg_horizontal.jpg'
-# BANNER_SUBTITLE = 'THE subtitles'
-BANNER_ALL_PAGES = False
+DISPLAY_CATEGORIES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = False
+
+MENUITEMS = (
+    ('Posts', '/pelican_ceilings/category/posts.html'),
+    ('Projects', '/pelican_ceilings/category/projects.html'),
+#     ('Music', '/pelican_ceilings/category/music.html'),
+    ('Publications', '/pelican_ceilings/pages/publications.html'),
+    ('About', '/pelican_ceilings/pages/About.html'),
+)
+
+'''
+made absolete by adjustments:
+    BANNER
+    BANNER_ALL_PAGES
+
+    perhaps in the future:
+    BANNER_SUBTITLE
+'''
+
+CUSTOM_BANNERS = (
+    # ('index', './images/banners/gg_horizontal_aligned_1.jpg'),
+    ('index', './images/banners/gg_horizontal_aligned_2c4_cropped.jpg'),
+    ('category/posts', './images/banners/white_side.jpg'),
+    ('category/projects', './images/banners/rome.jpg'),
+)
 
 # Blogroll
 # LINKS = (
@@ -108,11 +100,11 @@ SOCIAL = (
     ('Github', 'https://github.com/dzet'),
     ('LinkedIn', 'https://www.linkedin.com/in/denniszethof'),
     ('Happycow', 'https://www.happycow.net/members/profile/DZet/'),
-	('Dennis&Roben', 'http://www.dennisenroben.nl'),
+    ('Dennis&Roben', 'http://www.dennisenroben.nl'),
 )
 
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
 

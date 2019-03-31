@@ -30,10 +30,8 @@ The repository can be found [here](https://github.com/DZet/flying-dots).
 {{ flying_dots() }}
 
 <script>
-
 	var el = document.getElementById("together")
 
     var ref_point = document.getElementsByClassName("ref_point")[0]
     ref_point.parentNode.insertBefore(el, null)
-
 </script>

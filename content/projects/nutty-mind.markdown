@@ -4,7 +4,6 @@ category: projects
 date: 2019-02-14
 modified: 2019-02-14
 stylesheets: nutty-mind.css
-Sortorder: 001
 
 Eventhough I'm more interested in backend development, I still felt I needed to practice my CSS skills. It can be fun, and comes in handy all the time. As practice I tried to copy a certain style I saw in a painting, which resulted in:
 
@@ -29,7 +28,7 @@ Eventhough I'm more interested in backend development, I still felt I needed to 
 
 The example I had seen before was drawn on a wall in a hostel:
 
-<img src="./images/projects/nutty-mind/example.jpg">
+<img src="./images/projects/nutty-mind/example_cropped_2.jpg">
 
 Obviously CSS is not the best technique to create such an image, it is too fragile. But it was interesting none the less.
 

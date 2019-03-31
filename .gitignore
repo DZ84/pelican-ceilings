@@ -1,3 +1,6 @@
 
 todo*
 administration/
+*.sw*
+output/
+__pycache__
