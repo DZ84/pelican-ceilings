@@ -85,9 +85,11 @@ made absolete by adjustments:
 
 CUSTOM_BANNERS = (
     # ('index', './images/banners/gg_horizontal_aligned_1.jpg'),
-    ('index', './images/banners/gg_horizontal_aligned_2c4_cropped.jpg'),
-    ('category/posts', './images/banners/white_side.jpg'),
-    ('category/projects', './images/banners/rome.jpg'),
+    ('index.html', './images/banners/gg_horizontal_aligned_2c4_cropped.jpg'),
+    ('category/posts.html', './images/banners/white_side.jpg'),
+    ('category/projects.html', './images/banners/rome.jpg'),
+    ('pages/About.html', './images/banners/sun2.jpg'),
+    ('differing-banners.html', './images/banners/blocks3.jpg'),
 )
 
 # Blogroll
