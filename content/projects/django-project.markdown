@@ -6,7 +6,7 @@ modified: 2019-02-14
 Sortorder: 001
 
 
-Even though this site is just a mockup, it is fully functioning. Feel free to login and try out the commenting system for example.
+Even though **[this site][1]** is just a mockup, it is fully functioning. Feel free to login and try out the commenting system for example.
 
 The project combines a lot of different types of technologies, many of which were new to me before I started this solo project. It was not always easy to get the different aspects of this full-stack project to work together. 
 
@@ -39,6 +39,7 @@ The specs are:
 .
 
 <br>
-To visit the site click [here](https://philo-b.xyz).
-The repository can be found [here](https://github.com/DZet/philo-b.xyz).
+To visit the site click **[here][1]**.
+The repository can be found **[here](https://github.com/DZet/philo-b.xyz)**.
 
+[1]: http://druqtemaker.com/philo-b/

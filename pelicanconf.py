@@ -5,11 +5,13 @@ from __future__ import unicode_literals
 AUTHOR = 'Dennis Zethof'
 SITENAME = 'Dennis Zethof'
 
-SITEURL = 'https://philo-b.xyz/pelican_ceilings'
+SITEURL = 'https://druqtemaker.com'
+# SITEURL = 'https://philo-b.xyz/pelican_ceilings'
 # SITEURL = 'http://localhost:8000'
 
 # turned it off since it doesn't add anything at
 # the moment.
+# - Docs say it's only handy in development.
 # RELATIVE_URLS = True
 
 PATH = 'content'
@@ -65,13 +67,14 @@ AUTHOR_FEED_RSS = None
 
 DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
+DISPLAY_ARTICLE_INFO_ON_INDEX = True  # Shows article date, and more is set so.
 
 MENUITEMS = (
-    ('Posts', '/pelican_ceilings/category/posts.html'),
-    ('Projects', '/pelican_ceilings/category/projects.html'),
+    ('Posts', '/category/posts.html'),
+    ('Projects', '/category/projects.html'),
 #     ('Music', '/pelican_ceilings/category/music.html'),
-    ('Publications', '/pelican_ceilings/pages/publications.html'),
-    ('About', '/pelican_ceilings/pages/About.html'),
+    ('Publications', '/pages/publications.html'),
+    ('About', '/pages/About.html'),
 )
 
 '''
@@ -85,9 +88,10 @@ made absolete by adjustments:
 
 CUSTOM_BANNERS = (
     # ('index', './images/banners/gg_horizontal_aligned_1.jpg'),
-    ('index', './images/banners/gg_horizontal_aligned_2c4_cropped.jpg'),
-    ('category/posts', './images/banners/white_side.jpg'),
-    ('category/projects', './images/banners/rome.jpg'),
+    ('index.html', './images/banners/gg_horizontal_aligned_2c4_cropped.jpg'),
+    ('category/posts.html', './images/banners/white_side.jpg'),
+    ('category/projects.html', './images/banners/rome.jpg'),
+    ('differing-banners.html', './images/banners/red_ceiling.jpg'),
 )
 
 # Blogroll
@@ -99,8 +103,9 @@ CUSTOM_BANNERS = (
 SOCIAL = (
     ('Github', 'https://github.com/dzet'),
     ('LinkedIn', 'https://www.linkedin.com/in/denniszethof'),
-    ('Happycow', 'https://www.happycow.net/members/profile/DZet/'),
-    ('Dennis&Roben', 'http://www.dennisenroben.nl'),
+    # ('Happycow', 'https://www.happycow.net/members/profile/DZet/'),
+	# ('Medium', 'https://medium.com/@denniszethof'),
+    # ('Dennis&Roben', 'http://www.dennisenroben.nl'),
 )
 
 DEFAULT_PAGINATION = 10

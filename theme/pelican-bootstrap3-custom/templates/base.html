@@ -201,7 +201,7 @@
 <!-- Banner -->
 {% set banner = namespace(found=false) %}
 {% for category, banner_url in CUSTOM_BANNERS %}
-    {% if category == page_name and not found %}
+    {% if category == output_file and not found %}
         {% set banner.found = true %}
         {% set BANNER = banner_url %}
         {% include 'includes/banner.html' %}
