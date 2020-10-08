@@ -23,8 +23,8 @@ Some challenges in this projects were:
 .
 
 <br>
-To visit the site click [here](https://dzet.github.io).
-The repository can be found [here](https://github.com/DZet/flying-dots).
+To visit the site click [here](https://DZ84.github.io).
+The repository can be found [here](https://github.com/DZ84/flying-dots).
 
 {% from 'flying_dots.html' import flying_dots %}
 {{ flying_dots() }}

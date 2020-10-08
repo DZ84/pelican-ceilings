@@ -34,5 +34,5 @@ Obviously CSS is not the best technique to create such an image, it is too fragi
 
 As usual, different browsers may give different results, but this can break outside of Firefox or Chrome, and zoomlevels can have varying effects. I expect also that SASS would have made the process of creating this easier.
 
-The repository can be found [here](https://github.io/dzet/nutty_mind).
+The repository can be found [here](https://github.com/DZ84/nutty-mind).
 

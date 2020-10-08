@@ -40,6 +40,6 @@ The specs are:
 
 <br>
 To visit the site click **[here][1]**.
-The repository can be found **[here](https://github.com/DZet/philo-b.xyz)**.
+The repository can be found **[here](https://github.com/DZ84/philo-b)**.
 
 [1]: http://druqtemaker.com/philo-b/
