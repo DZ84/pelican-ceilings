@@ -101,8 +101,9 @@ CUSTOM_BANNERS = (
 
 # Social widget
 SOCIAL = (
-    ('Github', 'https://github.com/dz84'),
-    ('LinkedIn', 'https://www.linkedin.com/in/denniszethof'),
+    ('GitHub', 'https://github.com/dz84'),
+	('LinkedIn', 'https://www.linkedin.com/in/denniszethof'),
+	('StackOverflow', 'https://stackoverflow.com/users/1726026/dzet'),
     # ('Happycow', 'https://www.happycow.net/members/profile/DZet/'),
 	# ('Medium', 'https://medium.com/@denniszethof'),
     # ('Dennis&Roben', 'http://www.dennisenroben.nl'),

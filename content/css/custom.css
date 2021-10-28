@@ -1,3 +1,21 @@
 * {
 	font-size: 102%;
 }
+
+div.row {
+	background: white;
+}
+
+@media (max-width: 991px) {
+	div#banner {
+		margin-bottom: -140px;
+		z-index: -1;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	div#banner {
+		margin-bottom: -100px;
+		z-index: -1;
+	}
+}
